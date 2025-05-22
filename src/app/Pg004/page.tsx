@@ -39,7 +39,7 @@ const Pg004: React.FC = () => {
     <main className="px-4 py-8 space-y-16">
       <div className="container">
         <div className="flex w-full pb-[60px] relative h-[800px] mb-8">
-          <Image src="/image/conversation.jpg"
+          <Image src="/image/pg004-bktop.jpg"
             alt="サマリー画像"
             fill
             className="w-full block object-cover z-[100]" />

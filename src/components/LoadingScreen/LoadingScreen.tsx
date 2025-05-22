@@ -7,7 +7,7 @@ const LoadingScreen: React.FC = () => {
     <div className="loading-screen show">
       <div className="loading-text-container">
         <div className="loading-bar"></div>
-        <div className="loading-text">自由に、未来に、輝く</div>
+        <div className="loading-text">Team is power</div>
       </div>
     </div>
   );

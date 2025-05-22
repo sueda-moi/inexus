@@ -40,7 +40,7 @@ const Pg003: React.FC = () => {
       {/* サマリー画像セクション */}
       <div className="flex w-full pb-[60px] relative h-[800px] mb-8">
         <Image
-          src="/image/office.jpg"
+          src="/image/pg003-bktop.jpg"
           alt="サマリー画像"
           fill
           className="w-full block object-cover z-[100]"

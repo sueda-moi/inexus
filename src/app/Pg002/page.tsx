@@ -43,7 +43,7 @@ const Pg002: React.FC = () => {
       {/* 🔖 Summary section */}
       <div className="flex w-full pb-[60px] relative h-[800px] mb-8">
         <Image
-          src="/image/sakura.jpg"
+          src="/image/pg002-bktop.jpg"
           alt="Summary Image"
           fill
           className="w-full block object-cover z-[100]"

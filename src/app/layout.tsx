@@ -5,8 +5,8 @@ import Head from 'next/head';
 
 // サイトのメタ情報（必要に応じて編集してください）
 export const metadata: Metadata = {
-  title: '京喬不動産株式会社',
-  description: '自由に、未来に、輝く',
+  title: 'ネクサステクノロジー株式会社',
+  description: 'Team is power',
   icons: {
     icon: '/favicon.ico',
   },
