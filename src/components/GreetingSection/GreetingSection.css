@@ -1,0 +1,40 @@
+.greeting-section {
+  padding: 3rem 1.5rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.greeting-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #1e40af; /* blue-800 */
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #dbeafe;
+  padding-bottom: 0.5rem;
+}
+
+.greeting-paragraphs {
+  margin-bottom: 2rem;
+}
+
+.greeting-text {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #374151;
+  margin-bottom: 1.25rem;
+}
+
+.greeting-signature {
+  text-align: right;
+}
+
+.signature-image {
+  display: inline-block;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.signature-image:hover {
+  opacity: 1;
+}
