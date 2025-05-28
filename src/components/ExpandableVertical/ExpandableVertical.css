@@ -1,0 +1,35 @@
+/* ExpandableVertical.css */
+
+.expandable-card {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.expandable-card button {
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #f3f4f6;
+  padding: 1rem 1.25rem;
+  width: 100%;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expandable-card button:hover {
+  background-color: #e5e7eb;
+}
+
+.expandable-card div {
+  padding: 1rem 1.25rem;
+  background-color: #ffffff;
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.6;
+}

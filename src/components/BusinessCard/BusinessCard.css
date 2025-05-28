@@ -1,105 +1,111 @@
 .business-card {
   max-width: 280px;
+  min-height: 340px;
   margin: 0 auto;
-  padding: 1.5rem; 
+  padding: 1.5rem;
   text-align: center;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee); /* 柔光渐变背景 */
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 20px rgba(100, 100, 255, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #e0e0e0; 
-  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-top: 20px;
-  background: linear-gradient(to bottom, #cfccceda, #e0e5ed87); /* 粉色渐变蓝紫色 */
-  box-shadow: 0 0 30px rgba(250, 210, 255, 0.4); /* 柔和的光晕 */
-}
-
-.business-card::before{
-  background: radial-gradient(circle at top center, rgba(255, 255, 255, 0.3), transparent 70%);
 }
 
 .business-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(100, 100, 255, 0.15);
 }
 
+/* 图标包裹圆形背景 */
 .icon-wrapper {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  background-color: #eef2ff;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease;
 }
 
+.business-card:hover .icon-wrapper {
+  transform: scale(1.1);
+}
+
+/* .business-grid > div {
+  height: 100%;
+} */
+
+/* SVG 图标尺寸 */
 .icon-wrapper svg {
-  width: 40px;   
-  height: 40px;
+  width: 36px;
+  height: 36px;
+  color: #4338ca;
 }
 
 .card-title {
-  font-size: 1.1rem;      
-  font-weight: 500;          
-  margin-bottom: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e40af; /* text-blue-800 */
+  margin-bottom: 0.5rem;
 }
 
 .card-description {
-  font-size: 0.7rem;       
-  word-break: break-word;
-  overflow-wrap: break-word;
-  max-width: 100%;
-  line-height: 1.5;
-  max-height: 80px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 0.875rem;
+  color: #4b5563; /* text-gray-700 */
+  line-height: 1.6;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  max-height: none;
 }
 
-
+/* 按钮 */
 .read-button {
-  margin: 0 auto;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem 1.2rem;
-  font-size: 0.875rem;
+  margin-top: 1rem;
+  background-color: #e0e7ff;
+  color: #1e3a8a;
+  font-size: 0.85rem;
   font-weight: 600;
-  color: #ffffff;
-  background-color: #9e8f9969; 
+  border-radius: 9999px;
+  padding: 0.4rem 1.2rem;
   border: none;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
 }
 
 .read-button:hover {
-  background-color: #2563eb; /* hover: 深一点的蓝色 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  background-color: #c7d2fe;
   transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
-
-/* BusinessCarousel.css */
+/* 网格容器（BusinessCarousel） */
 .business-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
-  gap: 1.5rem; /* Space between grid items */
-  max-width: 72rem; /* Same as max-w-6xl */
-  margin-left: auto; /* Center alignment */
-  margin-right: auto; /* Center alignment */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* When the screen width is 768px or smaller, use 2 columns */
 @media (max-width: 768px) {
   .business-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* When the screen width is 640px or smaller, use 1 column */
 @media (max-width: 640px) {
   .business-grid {
-    grid-template-columns: 1fr; /* 1 column on mobile screens */
+    grid-template-columns: 1fr;
   }
 }
-
-
-

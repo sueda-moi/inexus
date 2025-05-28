@@ -18,40 +18,40 @@ const BusinessCarousel: React.FC = () => {
 
   const cardData = [
     {
-      title: getMessage('services', 'card_sales_title'),
-      description: getMessage('services', 'card_sales_desc'),
+      title: getMessage('services', 'card_Pg0031_title'),
+      description: getMessage('services', 'card_Pg0031_desc'),
       iconSrc: <RealEstateIcon001 />,
-      href: '/services/sales',
+      href: '/services/Pg0031',
     },
     {
-      title: getMessage('services', 'card_rent_title'),
-      description: getMessage('services', 'card_rent_desc'),
+      title: getMessage('services', 'card_Pg0032_title'),
+      description: getMessage('services', 'card_Pg0032_desc'),
       iconSrc: <RealEstateIcon002 />,
-      href: '/services/rent',
+      href: '/services/Pg0032',
     },
     {
-      title: getMessage('services', 'card_manage_title'),
-      description: getMessage('services', 'card_manage_desc'),
+      title: getMessage('services', 'card_Pg0033_title'),
+      description: getMessage('services', 'card_Pg0033_desc'),
       iconSrc: <RealEstateIcon003 />,
-      href: '/services/manage',
+      href: '/services/Pg0033',
     },
     {
-      title: getMessage('services', 'card_consult_title'),
-      description: getMessage('services', 'card_consult_desc'),
+      title: getMessage('services', 'card_Pg0034_title'),
+      description: getMessage('services', 'card_Pg0034_desc'),
       iconSrc: <RealEstateIcon004 />,
-      href: '/services/consult',
+      href: '/services/Pg0034',
     },
     {
-      title: getMessage('services', 'card_dev_title'),
-      description: getMessage('services', 'card_dev_desc'),
+      title: getMessage('services', 'card_Pg0035_title'),
+      description: getMessage('services', 'card_Pg0035_desc'),
       iconSrc: <RealEstateIcon005 />,
-      href: '/services/development',
+      href: '/services/Pg0035',
     },
     {
-      title: getMessage('services', 'card_fin_title'),
-      description: getMessage('services', 'card_fin_desc'),
+      title: getMessage('services', 'card_Pg0036_title'),
+      description: getMessage('services', 'card_Pg0036_desc'),
       iconSrc: <RealEstateIcon006 />,
-      href: '/services/finance',
+      href: '/services/Pg0036',
     },
   ];
 
