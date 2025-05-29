@@ -187,7 +187,7 @@ header.scrolled {
   position: relative;
   color: white;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   padding-bottom: 5px;
   transition: all 0.3s ease;
 }
@@ -244,7 +244,7 @@ header.scrolled {
   position: relative;
   color: white;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   padding-bottom: 5px;
   transition: all 0.3s ease;
 }
@@ -325,7 +325,7 @@ header.scrolled {
 
   /* メニュー項目のスタイル */
   .navbar div {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     /* フォントサイズを大きめに設定 */
     text-align: center;
     /* テキストを中央揃え */

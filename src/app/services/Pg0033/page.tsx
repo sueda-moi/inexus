@@ -24,11 +24,11 @@ const Pg0033: React.FC = () => {
       tag: '# 社員数の推移'
     },
     {
-      key: 'vision',
-      title: t('services', 'pg0033_vision_title'),
-      description: t('services', 'pg0033_vision_desc'),
+      key: 'partners',
+      title: t('services', 'pg0033_partners_title'),
+      description: t('services', 'pg0033_partners_desc'),
       image: '/image/pg0033-vision.jpg',
-      tag: '# 未来ビジョン'
+      tag: '# 主要取引先'
     }
   ];
 

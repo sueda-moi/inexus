@@ -34,8 +34,8 @@
   "pg0033_growth_desc": "Since our founding, we’ve achieved steady revenue growth by expanding clients and launching new services. We aim to strengthen this foundation further.",
   "pg0033_employees_title": "Team Expansion",
   "pg0033_employees_desc": "People are our greatest asset. We’ve built a diverse team by hiring both Japanese and global engineers, with strong training and retention practices.",
-  "pg0033_vision_title": "Future Vision",
-  "pg0033_vision_desc": "We aim to expand our global presence while embracing technologies such as AI, cloud, and Web3 to create new business value.",
+  "pg0033_partners_title": "Key Business Partners",
+  "pg0033_partners_desc": "We have built long-term partnerships with many leading enterprises including the NTT Data Group, mainly in finance, insurance, and IT sectors. Our solid track record spans system development and operational support.",
   "pg0034_title": "Japan-China Business & Real Estate Solutions",
   "pg0034_subtitle": "We connect businesses across Japan and China through IT-driven services and real estate expertise.",
   "pg0034_bridge_title": "Bridge Between Japan and China",
@@ -44,7 +44,7 @@
   "pg0034_support_desc": "Comprehensive assistance for Japanese companies expanding to China and Chinese companies entering Japan, including legal, accounting, and tax support.",
   "pg0034_realestate_title": "Real Estate Investment & Management",
   "pg0034_realestate_desc": "We provide real estate consulting, purchase support, and operational management services for both corporate and individual clients.",
-    "pg0035_title": "Talent Development & Social Responsibility",
+  "pg0035_title": "Talent Development & Social Responsibility",
   "pg0035_subtitle": "Beyond providing IT services, we are committed to fostering human resources and building a sustainable future.",
   "pg0035_training_title": "Education & Training",
   "pg0035_training_desc": "We offer structured training programs, in-house study groups, and knowledge sharing sessions to support the career growth of new employees and engineers.",
@@ -52,18 +52,8 @@
   "pg0035_dispatch_desc": "We provide experienced system engineers with strong communication and technical skills tailored to client needs, ensuring swift and smooth project delivery.",
   "pg0035_sdgs_title": "SDGs Initiatives",
   "pg0035_sdgs_desc": "We actively support the UN Sustainable Development Goals (SDGs) by engaging in environmental protection, promoting gender equity, and expanding IT education accessibility.",
-   "pg0036_title": "Our Values and Commitments",
-  "pg0036_subtitle": "Introducing our core philosophy, future vision, and promises to our clients.",
-  
-  "pg0036_philosophy_title": "Management Philosophy",
-  "pg0036_philosophy_desc": "At the heart of our company is the belief in valuing people. We emphasize not only the pursuit of technology, but also the personal and professional growth of our team members. Building trust with both our employees and clients is our core mission.",
-
-  "pg0036_vision_title": "Future Vision",
-  "pg0036_vision_desc": "We aim to go beyond providing IT services to create meaningful value for society. By expanding into diverse sectors and strengthening our global presence, we strive to become an internationally recognized and innovative force.",
-
-  "pg0036_commitment_title": "Commitment to Clients",
-  "pg0036_commitment_desc": "We listen closely to the voices of our clients and respond with sincerity and professionalism. Our goal is to deliver consistently high-quality, reliable services and to build lasting, trust-based partnerships."
-
-
-
+  "pg0036_organization_title": "Company Organization",
+  "pg0036_organization_desc": "Our company is structured around a representative director with multiple business units and group companies. We provide comprehensive services in IT, real estate, finance, and consulting, all under a flexible and collaborative structure.",
+  "pg0036_message_title": "Thank You for Your Continued Support",
+  "pg0036_message_desc": "At Nexus Technology, we strive to balance technological strength with human-centered values. Through cross-border collaboration, IT development, and real estate solutions, we continue to grow with our clients and create meaningful value together."
 }

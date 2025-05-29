@@ -58,33 +58,19 @@ const Pg004: React.FC = () => {
         <section id="access" className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-semibold mb-6">{getMessage('contact', 'pg004_access_title')}</h2>
 
-          {/* 丸の内オフィス */}
-          <div className="mb-12" ref={sectionTeamRef}>
-            <h3 className="text-xl font-semibold mb-2">{getMessage('contact', 'pg004_office_marunouchi')}</h3>
-            <p className="mb-2">{getMessage('contact', 'pg004_office_marunouchi_address')}</p>
-            <div className="w-full h-64 border">
-              <iframe
-                src="https://maps.google.com/maps?q=東京都千代田区丸の内3丁目4-2&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                className="w-full h-full"
-                allowFullScreen
-                loading="lazy"
-                title="丸の内オフィスの地図"
-              />
-            </div>
-          </div>
-
           {/* 日本橋オフィス */}
           <div>
             <h3 className="text-xl font-semibold mb-2">{getMessage('contact', 'pg004_office_nihonbashi')}</h3>
             <p className="mb-2">{getMessage('contact', 'pg004_office_nihonbashi_address')}</p>
             <div className="w-full h-64 border">
               <iframe
-                src="https://maps.google.com/maps?q=東京都中央区日本橋馬喰町1丁目12-7&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=東京都中央区東日本橋3-10-14&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 className="w-full h-full"
                 allowFullScreen
                 loading="lazy"
-                title="日本橋オフィスの地図"
+                title="東日本橋オフィスの地図"
               />
+
             </div>
           </div>
         </section>

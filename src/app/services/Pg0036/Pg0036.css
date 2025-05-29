@@ -6,94 +6,41 @@
   padding: 3rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4rem;
 }
 
-.pg0036-header {
+.pg0036-section {
   text-align: center;
-  margin-bottom: 3rem;
+  padding: 2rem 1rem;
+  background-color: #f9fafb;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .pg0036-title {
-  font-size: 2.5rem;
-  font-weight: 800;
+  font-size: 2rem;
+  font-weight: 700;
   color: #1e3a8a;
   margin-bottom: 1rem;
 }
 
-.pg0036-subtitle {
-  color: #4b5563;
+.pg0036-description {
   font-size: 1.125rem;
-  max-width: 36rem;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-.pg0036-card {
-  border: 1px solid #e5e7eb;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.3s ease;
-  overflow: hidden;
-}
-
-.pg0036-card:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-}
-
-.pg0036-card-toggle {
-  width: 100%;
-  background-color: #f3f4f6;
-  font-size: 1.125rem;
-  font-weight: 500;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1.25rem;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.pg0036-card-toggle:hover {
-  background-color: #e5e7eb;
-}
-
-.pg0036-card-content {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  padding: 1.5rem;
-  gap: 1.5rem;
-  background-color: #fff;
-}
-
-@media (min-width: 768px) {
-  .pg0036-card-content {
-    grid-template-columns: 2fr 3fr;
-  }
-}
-
-.pg0036-card-image img {
-  width: 100%;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.pg0036-card-text {
   color: #374151;
-  font-size: 1rem;
   line-height: 1.75;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  max-width: 60ch;
+  margin: 0 auto 2rem;
 }
 
-.pg0036-card-tag {
-  font-size: 0.75rem;
-  background-color: #2563eb;
-  color: white;
-  display: inline-block;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
-  margin-bottom: 0.5rem;
+.pg0036-image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.pg0036-image {
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
 }
