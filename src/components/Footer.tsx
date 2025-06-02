@@ -40,7 +40,7 @@ const Footer: React.FC<FooterProps> = ({ floating = false }) => {
 
       <div className="w-full leading-[0.5]">
         <div className='bottom-0 text-center'>
-          <p>{getMessage('footer', 'footer_copyright')}</p>
+          <p>{getMessage('Pg001', 'footer_copyright')}</p>
         </div>
 
       </div>

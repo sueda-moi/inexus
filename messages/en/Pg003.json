@@ -1,0 +1,50 @@
+{
+  "greeting_title": "President’s Message",
+  "greeting_paragraphs": [
+    "Nexus Technology Co., Ltd. was founded in April 2014 as an IT services company specializing in system development and consulting.",
+    "Our founding principle is 'Respect for People.' We strive to enhance our technical capabilities and service quality to earn the trust and satisfaction of our clients. Through our business, each employee continues to grow both professionally and personally, aiming to bring happiness to everyone involved.",
+    "Guided by this belief, we have assembled talent with rich development experience in upstream design, finance, public sector, and logistics, and we provide SE services across Japan. Additionally, for overseas clients primarily based in China, we offer IT services, SE support, consulting, and related products from a global perspective, utilizing diverse resources and know-how.",
+    "Though still a young company, all our employees are committed to continuous effort. We sincerely appreciate your continued support and trust."
+  ],
+  "signature_image_alt": "CEO Signature",
+  "history_title": "Company History",
+  "history": [
+    {
+      "date": "March 2020",
+      "event": "Head office relocated to Sunrise Tachibana Building 7F, 3-10-14 Higashi-Nihonbashi, Chuo-ku, Tokyo."
+    },
+    {
+      "date": "June 2017",
+      "event": "Established subsidiary company Nexfo Co., Ltd."
+    },
+    {
+      "date": "September 2014",
+      "event": "Relocated head office to Tanaka Building, 5-15-1 Asakusabashi, Taito-ku, Tokyo."
+    },
+    {
+      "date": "April 2014",
+      "event": "Nexus Technology Co., Ltd. was officially established."
+    }
+  ],
+  "pg003_timeline_title": "Company Timeline",
+  "pg003_message_title": "CEO Greeting & Philosophy",
+  "pg003_summary_title": "Company Overview",
+  "pg003_parent_title": "Head Office",
+  "pg003_subsidiary_title": "Subsidiary (100% owned by Nexus Technology)",
+  "pg003_parent_items": [
+    "Company Name: Nexus Technology Co., Ltd.",
+    "Address: Sunrise Tachibana Bldg. 7F, 3-10-14 Higashi-Nihonbashi, Chuo-ku, Tokyo 103-0004",
+    "Capital: 30 million JPY",
+    "Established: April 25, 2014",
+    "Representative: Jianping Xu",
+    "Employees: Approx. 150 people"
+  ],
+  "pg003_subsidiary_items": [
+    "Company Name: Nexfo Co., Ltd.",
+    "Address: Sunrise Tachibana Bldg. 7F, 3-10-14 Higashi-Nihonbashi, Chuo-ku, Tokyo 103-0004",
+    "Capital: 9.9 million JPY",
+    "Established: June 19, 2017",
+    "Representative: Kazushi Saito",
+    "Employees: Approx. 30 Japanese SEs"
+  ]
+}

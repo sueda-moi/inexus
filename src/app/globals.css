@@ -93,17 +93,6 @@ header.scrolled {
 }
 
 
-.childContent {
-  padding: 60px 120px 120px 120px;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-  .childContent {
-    padding: 10px 12px 12px 12px;
-  }
-}
-
 .App-footer {
   position: relative;
   /* 相対位置指定（他の要素との重なりを制御） */
@@ -177,7 +166,7 @@ header.scrolled {
 /* Make the navbar align properly */
 .nav-list {
   display: flex;
-  gap: 20px;
+  gap: 2rem;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -185,10 +174,10 @@ header.scrolled {
 
 .nav-link {
   position: relative;
+  font-size: 1.5rem;
   color: white;
   text-decoration: none;
-  font-size: 1.1rem;
-  padding-bottom: 5px;
+  padding-bottom: 0.3rem;
   transition: all 0.3s ease;
 }
 
@@ -264,7 +253,8 @@ header.scrolled {
 .menu-icon {
   display: none;
   cursor: pointer;
-  margin: 10px;
+  margin-left: auto;
+  padding-right: 1rem;
 }
 
 .menu-icon .bar {
@@ -319,14 +309,12 @@ header.scrolled {
     /* リスト項目を横並びにしない */
     flex-direction: column;
     /* 縦に並べる */
-    gap: 20px;
-    /* メニュー項目の間隔を20pxに設定 */
+    gap: 1rem;
+    /* メニュー項目の間隔を1remに設定 */
   }
 
   /* メニュー項目のスタイル */
   .navbar div {
-    font-size: 1.1rem;
-    /* フォントサイズを大きめに設定 */
     text-align: center;
     /* テキストを中央揃え */
   }
@@ -470,3 +458,25 @@ header.scrolled {
 }
 
 /*"言語を選択"*/
+
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  padding-left: 1rem;
+}
+
+.home-vertical-container {
+  display: flex;
+  flex-direction: column;
+  /* 使子元素垂直排列 */
+  gap: 8px;
+  width: 100%;
+}
+
+.lang-switcher {
+  margin-left: auto;
+  color: white;
+}

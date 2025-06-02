@@ -1,87 +1,111 @@
 'use client';
 
 import './Pg003.css';
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import BusinessCarousel from '@/components/BusinessCard/BusinessCarousel';
-import { useMessage } from '@/lib/useMessage';
-
 import dynamic from 'next/dynamic';
+import { useMessage } from '@/lib/useMessage';
+import { GreetingSection } from '@/components/GreetingSection/GreetingSection';
+import { CompanyTimeline } from '@/components/CompanyTimeline/CompanyTimeline';
 
-// ⚙️ LottieアニメーションをSSR無効で読み込み（クライアント専用）
 const ScrollLottie = dynamic(() => import('@/components/ScrollLottie/ScrollLottie'), { ssr: false });
 
 const Pg003: React.FC = () => {
-  const getMessage = useMessage();
   const [isAtBottom, setIsAtBottom] = useState(false);
   const sectionTeamRef = useRef<HTMLDivElement>(null);
+  const getMessage = useMessage();
+  const paragraphLines1 = getMessage('Pg003', 'pg003_parent_items');
+  const paragraphLines2 = getMessage('Pg003', 'pg003_subsidiary_items');
 
-  // 📜 スクロール位置によってページ下部かどうかを判定
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       const windowHeight = window.innerHeight;
       const fullHeight = document.documentElement.scrollHeight;
-
-      // 「ページ最下部」に到達していれば true
       setIsAtBottom(scrollTop + windowHeight >= fullHeight - 20);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // 🔍 指定したセクションにスムーズスクロール
   const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
+
   return (
-    <div className="container">
-      {/* サマリー画像セクション */}
-      <div className="flex w-full pb-[60px] relative h-[800px] mb-8">
+    <main className="pg003-container">
+      {/* ⛰️ Header Banner */}
+      <div className="relative h-[25vh] w-full mb-12">
         <Image
           src="/image/pg003-bktop.jpg"
-          alt="サマリー画像"
+          alt="Company Overview Background"
           fill
-          className="w-full block object-cover z-[100]"
+          className="object-cover w-full z-0"
         />
       </div>
 
-      {/* 👇 まだ最下部でなければ、スクロール誘導アニメーションを表示 */}
+      {/* 💬 Section 1: Vision Message */}
+      <section className="pg003-section" id="vision">
+        <h2 className="pg003-section-title">{getMessage('Pg003', 'pg003_message_title')}</h2>
+        <div className="pg003-message-flex">
+          <GreetingSection />
+        </div>
+      </section>
+
+      {/* 📅 Section 2: Company Timeline */}
+      <section className="pg003-section" id="timeline">
+        <h2 className="pg003-section-title">{getMessage('Pg003', 'pg003_timeline_title')}</h2>
+        <div className="pg003-timeline-list">
+          <CompanyTimeline />
+
+        </div>
+      </section>
+
+
+
+      {/* 🏢 Section 3: Company Summary */}
+      <section className="pg003-section" id="summary">
+        <h2 className="pg003-section-title">{getMessage('Pg003', 'pg003_summary_title')}</h2>
+
+        <div className="pg003-summary-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
+          {/* 🎴 Left: Parent Company */}
+          <div className="pg003-card" style={{ padding: '2rem', backgroundColor: '#ffffff', boxShadow: '0 6px 16px rgba(0, 0, 0, 0.1)', borderRadius: '12px' }}>
+            <h3 className="pg003-card-title" style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>{getMessage('Pg003', 'pg003_parent_title')}</h3>
+            <ul className="pg003-card-list">
+              {
+                Array.isArray(paragraphLines1)
+                  ? paragraphLines1.map((line, idx) => (
+                    <p key={idx} className="mb-4 leading-relaxed">{line}</p>
+                  ))
+                  : <p className="mb-4 leading-relaxed">{paragraphLines1}</p>
+              }
+            </ul>
+          </div>
+
+          {/* 🎴 Right: Subsidiary */}
+          <div className="pg003-card" style={{ padding: '2rem', backgroundColor: '#ffffff', boxShadow: '0 6px 16px rgba(0, 0, 0, 0.1)', borderRadius: '12px' }}>
+            <h3 className="pg003-card-title" style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>{getMessage('Pg003', 'pg003_subsidiary_title')}</h3>
+            <ul className="pg003-card-list">
+              {
+                Array.isArray(paragraphLines2)
+                  ? paragraphLines2.map((line, idx) => (
+                    <p key={idx} className="mb-4 leading-relaxed">{line}</p>
+                  ))
+                  : <p className="mb-4 leading-relaxed">{paragraphLines2}</p>
+              }
+            </ul>
+          </div>
+        </div>
+
+      </section>
+
+      {/* 👉 Scroll hint */}
       {!isAtBottom && (
         <div className="scroll-lottie-wrapper">
           <ScrollLottie onClick={() => scrollToSection(sectionTeamRef)} />
         </div>
       )}
-
-      <div className='childContent'>
-        {/* 事業概要セクション */}
-        <section className="mb-12 px-4 text-center">
-          <h1 className="text-3xl font-bold mb-4">{getMessage('services', 'pg003_title')}</h1>
-          <p className="text-base text-gray-700 max-w-3xl mx-auto">
-            {getMessage('services', 'pg003_paragraph_1')}
-          </p>
-        </section>
-
-        {/* サービス一覧セクション */}
-        {/* <section className="my-12 px-4">
-          <h2 className="text-2xl font-semibold mb-6 text-center">サービス一覧</h2> 
-
-          カルーセルの最大幅を制限し、中央揃えにするラッパー
-          <div className="max-w-screen-lg mx-auto">
-            <BusinessCarousel />
-          </div>
-        </section>
-        */}
-
-        <section className="services-section">
-          <h2 className="text-2xl font-bold text-center mb-8">{getMessage('services', 'pg003_services_title')}</h2>
-          <BusinessCarousel />
-        </section>
-      </div>
-
-
-    </div>
+    </main>
   );
 };
 

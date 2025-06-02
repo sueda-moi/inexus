@@ -1,0 +1,12 @@
+{
+  "pg004_access_title": "会社アクセス",
+  "pg004_office_nihonbashi": "東日本橋オフィス",
+  "pg004_office_nihonbashi_address": "〒103-0004 東京都中央区東日本橋3-10-14 サンライズ橘ビル7F",
+  "pg004_contact_title": "お問い合わせ方法",
+  "pg004_contact_instruction": "下記の方法でお気軽にお問い合わせください。",
+  "pg004_form_title": "メールでのお問い合わせ",
+  "pg004_form_name": "お名前",
+  "pg004_form_phone": "電話番号",
+  "pg004_form_message": "メッセージ",
+  "pg004_form_submit": "送信"
+}

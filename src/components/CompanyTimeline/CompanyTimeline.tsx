@@ -4,13 +4,13 @@ import './CompanyTimeline.css';
 export const CompanyTimeline = () => {
     const t = useMessage();
 
-    const raw = t('about', 'history');
+    const raw = t('Pg003', 'history');
     const history: { date: string; event: string }[] = Array.isArray(raw) ? raw : [];
 
 
     return (
         <section className="timeline-section">
-            <h2 className="timeline-title">{t('about', 'history_title')}</h2>
+            <h2 className="timeline-title">{t('Pg003', 'history_title')}</h2>
             <ul className="timeline-list">
                 {history.map((item, index) => (
                     <li key={index} className="timeline-item">

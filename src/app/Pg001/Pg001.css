@@ -2,12 +2,20 @@
     font-size: 2.5rem;
     letter-spacing: 0.1em;
     margin: 1rem;
+    text-align: left;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
 }
 
 .responsive-subtitle {
     font-size: 4rem;
     font-weight: bold;
     margin: 1rem;
+    text-align: left;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
 }
 
 .custom-button {
@@ -20,7 +28,7 @@
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
-    border-radius: 9999px;  
+    border-radius: 9999px;
 }
 
 /* Hover state styles */
@@ -45,4 +53,3 @@
         padding: 0.5rem 1rem;
     }
 }
-

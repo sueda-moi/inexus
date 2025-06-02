@@ -1,0 +1,21 @@
+{
+  "pg002_title": "＜Areas of Expertise＞",
+  "pg002_summary_items": [
+    "Finance Domain",
+    "・Core banking systems: deposit operations, remittance processing, interbank relay, etc.",
+    "(Mainly NTT Data joint systems for regional banks, JASTEM, MEJAR, etc.)",
+    "・Peripheral systems: joint batch operations, transaction history, AWS infrastructure development and maintenance",
+    "Insurance Domain",
+    "・Development and maintenance of life and non-life insurance systems (network-related)",
+    "(Major clients include Tokio Marine, Prudential Life, JHF, MUFG Bank, and Daiwa Institute of Research)",
+    "Social Infrastructure Domain",
+    "・Web system development, credit card systems, large-scale Ethernet development",
+    "(Mainly for Riken Vitamin, INET, NSS, etc.)",
+    "＜Our Strengths＞",
+    "We have a large number of SEs with deep expertise in financial systems, including core and peripheral systems, and insurance",
+    "We also have many SEs with experience in building infrastructure like AWS and networks",
+    "According to client needs:",
+    "・We can offer personnel proposals in collaboration with our Japanese SE subsidiary",
+    "・We support development and maintenance outside the Tokyo metropolitan area, including Hokkaido (Sapporo) and Nagoya"
+  ]
+}
