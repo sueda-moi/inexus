@@ -56,12 +56,12 @@ const Pg005: React.FC = () => {
       <div className='childContent'>
         {/* 会社住所 + 地図 */}
         <section id="access" className="max-w-5xl mx-auto">
-          <h2 className="text-2xl font-semibold mb-6">{getMessage('contact', 'pg004_access_title')}</h2>
+          <h2 className="text-2xl font-semibold mb-6">{getMessage('Pg005', 'pg004_access_title')}</h2>
 
           {/* 日本橋オフィス */}
           <div>
-            <h3 className="text-xl font-semibold mb-2">{getMessage('contact', 'pg004_office_nihonbashi')}</h3>
-            <p className="mb-2">{getMessage('contact', 'pg004_office_nihonbashi_address')}</p>
+            <h3 className="text-xl font-semibold mb-2">{getMessage('Pg005', 'pg004_office_nihonbashi')}</h3>
+            <p className="mb-2">{getMessage('Pg005', 'pg004_office_nihonbashi_address')}</p>
             <div className="w-full h-64 border">
               <iframe
                 src="https://maps.google.com/maps?q=東京都中央区東日本橋3-10-14&t=&z=15&ie=UTF8&iwloc=&output=embed"
@@ -77,13 +77,13 @@ const Pg005: React.FC = () => {
 
         {/* お問い合わせ方法 */}
         <section id="contact-method" className="max-w-5xl mx-auto">
-          <h2 className="text-2xl font-semibold mb-4">{getMessage('contact', 'pg004_contact_title')}</h2>
-          <p className="mb-4">{getMessage('contact', 'pg004_contact_instruction')}</p>
+          <h2 className="text-2xl font-semibold mb-4">{getMessage('Pg005', 'pg004_contact_title')}</h2>
+          <p className="mb-4">{getMessage('Pg005', 'pg004_contact_instruction')}</p>
         </section>
 
         {/* 問い合わせフォーム */}
         <section id="contact-form" className="max-w-2xl mx-auto">
-          <h3 className="text-xl font-semibold mb-4">{getMessage('contact', 'pg004_form_title')}</h3>
+          <h3 className="text-xl font-semibold mb-4">{getMessage('Pg005', 'pg004_form_title')}</h3>
           <form
             className="space-y-4"
             onSubmit={async (e) => {
@@ -120,19 +120,19 @@ const Pg005: React.FC = () => {
           >
             <div>
               <label htmlFor="name" className="block text-sm font-medium">
-                {getMessage('contact', 'pg004_form_name')}
+                {getMessage('Pg005', 'pg004_form_name')}
               </label>
               <input id="name" name="name" type="text" className="w-full border px-3 py-2 rounded" />
             </div>
             <div>
               <label htmlFor="phone" className="block text-sm font-medium">
-                {getMessage('contact', 'pg004_form_phone')}
+                {getMessage('Pg005', 'pg004_form_phone')}
               </label>
               <input id="phone" name="phone" type="tel" className="w-full border px-3 py-2 rounded" />
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium">
-                {getMessage('contact', 'pg004_form_message')}
+                {getMessage('Pg005', 'pg004_form_message')}
               </label>
               <textarea id="message" name="message" rows={4} className="w-full border px-3 py-2 rounded" />
             </div>
@@ -140,7 +140,7 @@ const Pg005: React.FC = () => {
               type="submit"
               className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
             >
-              {getMessage('contact', 'pg004_form_submit')}
+              {getMessage('Pg005', 'pg004_form_submit')}
             </button>
           </form>
         </section>

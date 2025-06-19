@@ -1,94 +1,88 @@
 'use client';
 
-import './Pg002.css';
-import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import ExpandableTab from '@/components/ExpandableTab/ExpandableTab';
-import dynamic from 'next/dynamic';
-// import InfoCardButton from '@/components/InfoCardButton/InfoCardButton';
-// import styles from '@/components/InfoCardButton/InfoCardButton.module.css';
-import { useMessage } from '@/lib/useMessage';
-import { GreetingSection } from '@/components/GreetingSection/GreetingSection';
-import { CompanyTimeline } from '@/components/CompanyTimeline/CompanyTimeline';
-//import { useLocaleStore } from '@/store/useLocaleStore';
+import './Pg004.css';
+import React, { useEffect, useState } from 'react';
+import OrgChartTree from '@/components/OrgChartTree/OrgChartTree';
 
-// ⚙️ Lottie animation (disabled SSR for client-side only)
-const ScrollLottie = dynamic(() => import('@/components/ScrollLottie/ScrollLottie'), { ssr: false });
+const Pg004: React.FC = () => {
+  const [activeSection, setActiveSection] = useState('');
 
-const Pg002: React.FC = () => {
-  const sectionTeamRef = useRef<HTMLDivElement>(null);
-  const sectionCompanyRef = useRef<HTMLDivElement>(null);
-  const getMessage = useMessage();
-  const paragraphLines = getMessage('Pg002', 'pg002_paragraph_2');
-
-
-  const [isAtBottom, setIsAtBottom] = useState(false);
-
+  // 滚动监听（可选）
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const fullHeight = document.documentElement.scrollHeight;
-      setIsAtBottom(scrollTop + windowHeight >= fullHeight - 20);
+      const sections = document.querySelectorAll('h2[id]');
+      let currentId = '';
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 100 && rect.bottom >= 100) {
+          currentId = section.id;
+        }
+      });
+      setActiveSection(currentId);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
-    ref.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
-    <div className="container">
-      {/* 🔖 Summary section */}
-      <div className="flex w-full pb-[60px] relative h-[800px] mb-8">
-        <Image
-          src="/image/pg002-bktop.jpg"
-          alt="Summary Image"
-          fill
-          className="w-full block object-cover z-[100]"
-        />
-        <div className="summaryText-container">
-          <h1>{getMessage('Pg002', 'pg002_title')}</h1>
-          <p>{getMessage('Pg002', 'pg002_paragraph_1')}</p>
-          {/* <p>{getMessage('Pg002', 'pg002_paragraph_2')}</p> */}
-          {
-            Array.isArray(paragraphLines)
-              ? paragraphLines.map((line, idx) => (
-                <p key={idx} className="mb-4 leading-relaxed">{line}</p>
-              ))
-              : <p className="mb-4 leading-relaxed">{paragraphLines}</p>
-          }
+    <div className="pg004">
+      {/* 顶部导航栏锚点 */}
+      <nav className="pg004-nav">
+        <a href="#business" className={activeSection === 'business' ? 'active' : ''}>事業</a>
+        <a href="#services" className={activeSection === 'services' ? 'active' : ''}>サービス</a>
+        <a href="#organization" className={activeSection === 'organization' ? 'active' : ''}>組織図</a>
+        <a href="#strength" className={activeSection === 'strength' ? 'active' : ''}>強み</a>
+      </nav>
 
+      {/* 业务结构图 */}
+      <section className="pg004-section">
+        <h2 id="business">ネクサステクノロジー株式会社の事業</h2>
+        <div className="pg004-image-wrapper">
+          <Image
+            src="/images/business-structure-placeholder.svg"
+            alt="事業構造図"
+            width={800}
+            height={400}
+          />
         </div>
-      </div>
+      </section>
 
-      {/* 👇 まだ最下部でなければ、スクロール誘導アニメーションを表示 */}
-      {!isAtBottom && (
-        <div className="scroll-lottie-wrapper">
-          <ScrollLottie onClick={() => scrollToSection(sectionTeamRef)} />
+      {/* 服务种类 */}
+      <section className="pg004-section">
+        <h2 id="services">サービス体系</h2>
+        <div className="pg004-card-grid">
+          <div className="pg004-card">社会インフラ事業</div>
+          <div className="pg004-card">次の柱となる事業群</div>
+          <div className="pg004-card">ソリューション開発</div>
         </div>
-      )}
+      </section>
 
-      {/* 🧩 詳細セクション */}
-      <div className="flex flex-col gap-[30px] childContent">
-
-        {/* 🏢 会社概要 */}
-        <div className="section-detail" ref={sectionCompanyRef}>
-          <ExpandableTab
-            title={getMessage('Pg002', 'pg002_section_company_title')}
-            subtitle={getMessage('Pg002', 'pg002_section_company_subtitle')}
-          >
-            <GreetingSection />
-            <CompanyTimeline />
-
-          </ExpandableTab>
+      {/* 组织架构图 */}
+      <section className="pg004-section orgchart-block">
+        <h2 id="organization">組織図（インタラクティブ）</h2>
+        <div className="pg004-orgchart-wrapper">
+          <OrgChartTree />
         </div>
+      </section>
 
-      </div>
+      {/* 数据与优势 */}
+      <section className="pg004-section">
+        <h2 id="strength">ネクサステクノロジー株式会社の強み</h2>
+        <div className="pg004-stats">
+          <div className="pg004-stat-item">
+            <strong>6,900+</strong>
+            <p>システムエンジニア数</p>
+          </div>
+          <div className="pg004-stat-item">
+            <strong>8,000+</strong>
+            <p>DX関連人材</p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
 
-export default Pg002;
+export default Pg004;

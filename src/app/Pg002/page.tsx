@@ -4,7 +4,6 @@ import './Pg002.css';
 import Image from 'next/image';
 // import dynamic from 'next/dynamic';
 // import { useEffect, useRef, useState } from 'react';
-import { useEffect } from 'react';
 import { useMessage } from '@/lib/useMessage';
 
 // ⚙️ 客户端加载 ScrollLottie
