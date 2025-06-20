@@ -396,18 +396,18 @@ header.scrolled {
   }
 }
 
-.gradient-text {
+/* .gradient-text {
   background: linear-gradient(270deg,
-      #ff6ec4,
-      #7873f5,
-      #4ade80,
-      #facc15,
-      #ff6ec4);
+      #000000,
+      #000000,
+      #000000,
+      #000000,
+      #000000);
   background-size: 400% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shimmer 6s linear infinite;
-}
+} */
 
 
 .text-shadow {
