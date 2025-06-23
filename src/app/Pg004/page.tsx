@@ -41,10 +41,10 @@ const Pg004: React.FC = () => {
         <h2 id="business">ネクサステクノロジー株式会社の事業</h2>
         <div className="pg004-image-wrapper">
           <Image
-            src="/images/business-structure-placeholder.svg"
+            src="/image/pg004-image.jpg"
             alt="事業構造図"
             width={800}
-            height={400}
+            height={800}
           />
         </div>
       </section>
@@ -53,9 +53,19 @@ const Pg004: React.FC = () => {
       <section className="pg004-section">
         <h2 id="services">サービス体系</h2>
         <div className="pg004-card-grid">
-          <div className="pg004-card">社会インフラ事業</div>
-          <div className="pg004-card">次の柱となる事業群</div>
-          <div className="pg004-card">ソリューション開発</div>
+          <div className="pg004-card">
+            <h3>社会インフラ事業</h3>
+            <p>行政、交通、医療など、社会基盤を支えるシステムの構築・運用を通じて、安心・安全な社会の実現を支援します。</p>
+          </div>
+          <div className="pg004-card">
+            <h3>次の柱となる事業群</h3>
+            <p>AI・IoT・クラウド技術を活用した新規事業を積極的に展開し、次世代の成長エンジンを育成しています。</p>
+          </div>
+          <div className="pg004-card">
+            <h3>ソリューション開発</h3>
+            <p>顧客の課題に応じて、システム開発・運用保守・セキュリティ対応まで一気通貫で提供し、ビジネス変革を支援します。</p>
+          </div>
+
         </div>
       </section>
 
@@ -64,21 +74,6 @@ const Pg004: React.FC = () => {
         <h2 id="organization">組織図（インタラクティブ）</h2>
         <div className="pg004-orgchart-wrapper">
           <OrgChartTree />
-        </div>
-      </section>
-
-      {/* 数据与优势 */}
-      <section className="pg004-section">
-        <h2 id="strength">ネクサステクノロジー株式会社の強み</h2>
-        <div className="pg004-stats">
-          <div className="pg004-stat-item">
-            <strong>6,900+</strong>
-            <p>システムエンジニア数</p>
-          </div>
-          <div className="pg004-stat-item">
-            <strong>8,000+</strong>
-            <p>DX関連人材</p>
-          </div>
         </div>
       </section>
     </div>

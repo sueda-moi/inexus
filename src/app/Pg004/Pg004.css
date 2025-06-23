@@ -42,9 +42,9 @@
 
 .pg004-card-grid {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 1rem;
-  justify-content: center;
+  padding: 1rem;
 }
 
 .pg004-card {
@@ -53,7 +53,7 @@
   padding: 1rem 2rem;
   min-width: 200px;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   font-weight: 500;
 }
 
@@ -86,6 +86,16 @@
 }
 
 /* 組織図 */
+.orgchart-block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #dce3eb;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
 
 .orgchart-block h2 {
   font-size: 1.5rem;
@@ -118,11 +128,12 @@
   border: 1px solid #dce3eb;
   border-radius: 12px;
   padding: 1rem;
-  overflow: auto;
-  max-height: 600px;
-  min-height: 400px;
+  height: auto;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   position: relative;
+  width: 960px;
+  justify-content: center;
+  display: flex
 }
 
 

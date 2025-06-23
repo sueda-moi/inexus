@@ -88,7 +88,9 @@ const OrgChartHTML: React.FC = () => {
           .org-node.root {
             background: #eff6ff;
             font-weight: bold;
-            border-color: #1d4ed8;
+            border-color:rgb(251, 2, 2);
+            font-size: 1.1rem;
+            color: #1e40af;
           }
 
           .has-children {

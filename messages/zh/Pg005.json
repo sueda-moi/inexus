@@ -1,12 +1,24 @@
 {
-  "pg004_access_title": "会社アクセス",
-  "pg004_office_nihonbashi": "東日本橋オフィス",
-  "pg004_office_nihonbashi_address": "〒103-0004 東京都中央区東日本橋3-10-14 サンライズ橘ビル7F",
-  "pg004_contact_title": "お問い合わせ方法",
-  "pg004_contact_instruction": "下記の方法でお気軽にお問い合わせください。",
-  "pg004_form_title": "メールでのお問い合わせ",
-  "pg004_form_name": "お名前",
-  "pg004_form_phone": "電話番号",
-  "pg004_form_message": "メッセージ",
-  "pg004_form_submit": "送信"
+  "page_title": "联系我们",
+  "form_heading": "如有任何问题或合作意向，欢迎通过下方表单与我们联系。",
+  "access_title": "访问地址",
+  "access_address": "日本东京都中央区东日本桥3-10-14，邮编103-0004",
+
+  "form_name_label": "姓名",
+  "form_phone_label": "电话号码",
+  "form_email_label": "电子邮箱",
+  "form_message_label": "留言内容",
+
+  "form_phone_placeholder": "090-xxxx-xxxx",
+  "form_email_placeholder": "example@example.com",
+
+  "form_submit_button": "提交",
+  "form_submitting": "提交中…",
+  "form_success_message": "您的信息已成功发送，感谢联系！",
+
+  "toast_missing_name": "请填写姓名。",
+  "toast_missing_contact": "请填写电话号码或邮箱中的任意一项。",
+  "toast_success": "发送成功！",
+  "toast_fail": "发送失败。",
+  "toast_error": "提交过程中发生错误。"
 }
