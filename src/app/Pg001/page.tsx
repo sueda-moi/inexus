@@ -17,7 +17,7 @@ const Pg001: React.FC = () => {
     <main className="pg001-container">
       {/* 🖼️ Hero Section */}
       <section className="pg001-hero">
-        <ImageCarousel/>
+        <ImageCarousel />
         <div className="pg001-hero-text">
           <h1>{getMessage('Pg001', 'pg001_title')}</h1>
           <p>{getMessage('Pg001', 'pg001_subtitle')}</p>
@@ -41,33 +41,49 @@ const Pg001: React.FC = () => {
 
       {/* 🏢 Intro Section */}
       <section className="pg001-intro">
-        <div className="pg001-intro-text">
-          <h3>{getMessage('Pg001', 'pg001_intro_title')}</h3>
-          <p>{getMessage('Pg001', 'pg001_intro_paragraph')}</p>
-          <Link href="/Pg003"><div className="pg001-intro-more">View More</div></Link>
-
-        </div>
-        <div className="pg001-intro-image">
-          <Image src="/image/pg002-card.jpg" alt="Intro" width={600} height={400} />
+        <div className="pg001-intro-content">
+          <div className="pg001-intro-text">
+            <h3>{getMessage('Pg001', 'pg001_intro_title')}</h3>
+            <p>{getMessage('Pg001', 'pg001_intro_paragraph')}</p>
+            <Link href="/Pg003">
+              <div className="pg001-intro-more">View more</div>
+            </Link>
+          </div>
+          <div className="pg001-intro-image">
+            <Image
+              src="/image/pg001-intro.jpg"
+              alt="Intro"
+              width={300}
+              height={200}
+            />
+          </div>
         </div>
       </section>
+
 
       {/* ⭐ Features Section */}
       <section className="pg001-features">
         <h2 className="pg001-section-title">{getMessage('Pg001', 'pg001_features_title')}</h2>
         <div className="pg001-feature-grid">
           <div className="pg001-feature-card">
-            <Image src="/image/pg0035-dispatch.jpg" alt="Feature 1" className='pg001-feature1-jpg'   width={400} height={250} />
+            <Image src="/image/pg001-feature1.jpg" alt="Feature 1" className='pg001-feature1-jpg'
+              layout="responsive"
+              width={4}
+              height={3} />
             <h4>① {getMessage('Pg001', 'pg001_feature1_title')}</h4>
             <p>{getMessage('Pg001', 'pg001_feature1_desc')}</p>
           </div>
           <div className="pg001-feature-card">
-            <Image src="/image/pg0032-quality.jpg" alt="Feature 2"  className='pg001-feature2-jpg'   width={400} height={250} />
+            <Image src="/image/pg001-feature2.jpg" alt="Feature 2" className='pg001-feature2-jpg' layout="responsive"
+              width={4}
+              height={3} />
             <h4>② {getMessage('Pg001', 'pg001_feature2_title')}</h4>
             <p>{getMessage('Pg001', 'pg001_feature2_desc')}</p>
           </div>
           <div className="pg001-feature-card">
-            <Image src="/image/pg0035-training.jpg" alt="Feature 3"  className='pg001-feature3-jpg'  width={400} height={250} />
+            <Image src="/image/pg001-feature3.jpg" alt="Feature 3" className='pg001-feature3-jpg' layout="responsive"
+              width={4}
+              height={3} />
             <h4>③ {getMessage('Pg001', 'pg001_feature3_title')}</h4>
             <p>{getMessage('Pg001', 'pg001_feature3_desc')}</p>
           </div>

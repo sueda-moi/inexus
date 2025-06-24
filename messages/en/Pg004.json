@@ -1,28 +1,42 @@
 {
-
-  "pg002_title": "＜得意分野＞",
-  "pg002_summary_items": [
-    "金融分野領域",
-    "・勘定系の預金業務／為替業務／インターバンク中継業務など",
-    "（主に、ＮＴＴデータ地銀共同システム、ＪＡＳＴＥＭ、ＭＥＪＡＲなど）",
-    "・周辺系の共同自行バッチ業務／取引履歴業務／ＡＷＳ基盤構築・運用保守",
-    "保険分野領域",
-    "・生命保険／損害保険の開発・維持、運用（ＮＷ）",
-    "（主に、東京海上、生保ブルデンシャル、住宅金融機構、三菱ＵＦＪ銀行、大和総研）",
-    "社会基盤領域",
-    "・ＷＥＢシステム開発／クレジットカード／大規模Ethernet開発",
-    "（主に、理研ビタミン、アイネット、ＮＳＳ）",
-    "＜当社の強み＞",
-    "金融業界の勘定系／周辺系／保険の業務に精通した数多くのSE人財保有",
-    "社会基盤の環境（AWSなど）ネットワーク構築に精通した数多くのSE人財保有",
-    "お客様の要望により、",
-    "・当社子会社（日本人のＳＥ集団）と連携した要員提案",
-    "・首都圏、北海道（札幌）名古屋以外の地域での開発・維持"
-  ]
-,
-
-  "pg002_section_company_title": "会社概要",
-  "pg002_section_company_subtitle": " "
-
-
+  "pg004_header_alt": "Business Structure",
+  "pg004_services_title": "Service Structure",
+  "pg004_services": [
+    {
+      "title": "Social Infrastructure",
+      "desc": "We support the realization of a safe and secure society by building and operating systems that support public services, transportation, healthcare, and other social foundations."
+    },
+    {
+      "title": "Emerging Business Pillars",
+      "desc": "We actively develop new businesses leveraging AI, IoT, and cloud technologies, fostering the next generation of growth engines."
+    },
+    {
+      "title": "Solution Development",
+      "desc": "We provide end-to-end solutions from system development to operations, maintenance, and security, tailored to customer challenges and business transformation."
+    }
+  ],
+  "pg004_orgchart_title": "Organizational Chart (Interactive)",
+  "pg004_orgchart_data": {
+    "ceo": "President & CEO",
+    "departments": [
+      { "title": "Corporate Planning Dept." },
+      { "title": "Sales Dept." },
+      {
+        "title": "Finance Business Dept.",
+        "children": ["Core System Operations", "Peripheral System Operations", "AWS & Server Infrastructure"]
+      },
+      {
+        "title": "Corporate Business Dept.",
+        "children": ["Life & Non-life Insurance", "Small-scale Insurance", "Server Infrastructure"]
+      },
+      {
+        "title": "Business Promotion Dept.",
+        "children": ["Embedded Systems", "Growth Areas"]
+      },
+      {
+        "title": "Group Company Strategy Office",
+        "children": ["Nexfa Co., Ltd."]
+      }
+    ]
+  }
 }

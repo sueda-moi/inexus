@@ -29,7 +29,7 @@ const ImageCarousel: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-full overflow-hidden">
+    <div className="relative w-full h-[55vh] overflow-hidden">
       {/* 画像切り替え */}
       <AnimatePresence>
         <motion.img

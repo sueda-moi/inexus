@@ -1,11 +1,42 @@
 {
-    "nav_home": "ホーム",
-  "nav_about": "概要",
-  "nav_services": "事業内容",
-  "nav_contact": "お問い合わせ",
-  "language_toggle": "言語切替",
-  "pg001_title": "私たちはＩＴを通してお客様のビジネスに最大限に貢献します。",
-  "pg001_subtitle": "「人」を大事にし、社員が幸せを感じる会社を目指します。" ,
-  "pg001_button_learn_more": "詳しく見る",
-  "footer_copyright": "ALL RIGHTS RESERVED ©Nexus Technology Co., Ltd."
+  "pg004_header_alt": "事業構造図",
+  "pg004_services_title": "サービス体系",
+  "pg004_services": [
+    {
+      "title": "社会インフラ事業",
+      "desc": "行政、交通、医療など、社会基盤を支えるシステムの構築・運用を通じて、安心・安全な社会の実現を支援します。"
+    },
+    {
+      "title": "次の柱となる事業群",
+      "desc": "AI・IoT・クラウド技術を活用した新規事業を積極的に展開し、次世代の成長エンジンを育成しています。"
+    },
+    {
+      "title": "ソリューション開発",
+      "desc": "顧客の課題に応じて、システム開発・運用保守・セキュリティ対応まで一気通貫で提供し、ビジネス変革を支援します。"
+    }
+  ],
+  "pg004_orgchart_title": "組織図（インタラクティブ）",
+  "pg004_orgchart_data": {
+    "ceo": "代表取締役社長",
+    "departments": [
+      { "title": "経営企画部" },
+      { "title": "営業部" },
+      {
+        "title": "金融ビジネス部",
+        "children": ["勘定系業務", "周辺系業務", "AWS・サーバ構築など"]
+      },
+      {
+        "title": "法人ビジネス部",
+        "children": ["生保・損保", "小口保険など", "サーバ構築など"]
+      },
+      {
+        "title": "ビジネス推進部",
+        "children": ["組込み系", "成長分野"]
+      },
+      {
+        "title": "グループ会社戦略室",
+        "children": ["ネクスファ株式会社"]
+      }
+    ]
+  }
 }

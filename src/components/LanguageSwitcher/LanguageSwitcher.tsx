@@ -16,11 +16,15 @@ const locales = [
   { code: 'zh', label: '中文' },
 ];
 
-export default function LanguageSwitcher() {
+interface LanguageSwitcherProps {
+  scrolled?: boolean;
+}
+
+export default function LanguageSwitcher({ scrolled }: LanguageSwitcherProps) {
   const { locale, setLocale } = useLocaleStore();
 
   return (
-    <div className="language-switcher-container">
+    <div className={`language-switcher-container ${scrolled ? 'scrolled' : ''}`}>
       <Listbox value={locale} onChange={(val) => setLocale(val as SupportedLocale)}>
         <div className="language-switcher">
           <ListboxButton className="language-switcher-button">

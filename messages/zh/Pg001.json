@@ -1,13 +1,30 @@
 {
   "nav_pg001": "首页",
-  "nav_pg002": "Nexus的优势",
+  "nav_pg002": "Nexus 优势",
   "nav_pg003": "公司信息",
   "nav_pg004": "事业内容",
   "nav_pg005": "联系我们",
-  "nav_pg006": "公司内部公告板",
+  "nav_pg006": "内部公告栏",
   "language_toggle": "语言切换",
-  "pg001_title": "我们通过IT为客户的业务提供最大程度的支持。",
+  "pg001_title": "我们通过 IT 最大限度地为客户业务赋能。",
   "pg001_subtitle": "重视“人”，致力于打造让员工感到幸福的公司。",
   "pg001_button_learn_more": "了解更多",
-  "footer_copyright": "版权所有 ©Nexus Technology株式会社"
+  "footer_copyright": "版权所有 ©Nexus Technology Co., Ltd.",
+  "pg001_news_title": "新闻公告",
+  "pg001_news_items": [
+    "2014.04 Nexus Technology 株式会社成立",
+    "2014.09 总部迁至东京都台东区浅草桥",
+    "2017.06 子公司 Nexfo 株式会社成立",
+    "2020.03 总部迁至东京都中央区东日本桥",
+    "2024.07 举办成立十周年纪念派对"
+  ],
+  "pg001_intro_title": "关于 Nexus Technology 株式会社",
+  "pg001_intro_paragraph": "我们以“IT 事业”为核心业务，主要聚焦金融、保险与社会基础设施领域，未来将以“房地产事业”作为成长领域进行重点发展。",
+  "pg001_features_title": "客户选择我们的 3 个理由",
+  "pg001_feature1_title": "多元化的业务领域",
+  "pg001_feature1_desc": "在 IT、旅游、人力等多个领域拥有丰富实绩与整合提案能力。",
+  "pg001_feature2_title": "国际视野与应对能力",
+  "pg001_feature2_desc": "通过海外据点与多语言服务，提供国际业务支持。",
+  "pg001_feature3_title": "深耕本地的信赖关系",
+  "pg001_feature3_desc": "总部位于东京中央区，与当地社区共同成长。"
 }

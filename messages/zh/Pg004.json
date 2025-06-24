@@ -1,11 +1,42 @@
 {
-    "nav_home": "ホーム",
-  "nav_about": "概要",
-  "nav_services": "事業内容",
-  "nav_contact": "お問い合わせ",
-  "language_toggle": "言語切替",
-  "pg001_title": "私たちはＩＴを通してお客様のビジネスに最大限に貢献します。",
-  "pg001_subtitle": "「人」を大事にし、社員が幸せを感じる会社を目指します。" ,
-  "pg001_button_learn_more": "詳しく見る",
-  "footer_copyright": "ALL RIGHTS RESERVED ©Nexus Technology Co., Ltd."
+  "pg004_header_alt": "事业结构图",
+  "pg004_services_title": "服务体系",
+  "pg004_services": [
+    {
+      "title": "社会基础设施事业",
+      "desc": "通过构建和运营支撑政府、交通、医疗等社会基础的系统，支持实现一个安全、安心的社会。"
+    },
+    {
+      "title": "新兴事业群",
+      "desc": "积极开展基于 AI、物联网和云技术的新事业，培育下一代的增长引擎。"
+    },
+    {
+      "title": "解决方案开发",
+      "desc": "针对客户的课题，提供从系统开发到运营维护、安全应对的一站式服务，助力业务转型。"
+    }
+  ],
+  "pg004_orgchart_title": "组织结构图（互动）",
+  "pg004_orgchart_data": {
+    "ceo": "首席执行官",
+    "departments": [
+      { "title": "经营企划部" },
+      { "title": "营业部" },
+      {
+        "title": "金融事业部",
+        "children": ["会计系统业务", "外围系统业务", "AWS/服务器构建等"]
+      },
+      {
+        "title": "法人事业部",
+        "children": ["人寿/财产保险", "小额保险等", "服务器构建等"]
+      },
+      {
+        "title": "业务推进部",
+        "children": ["嵌入式系统", "成长领域"]
+      },
+      {
+        "title": "集团公司战略室",
+        "children": ["Nexfa株式会社"]
+      }
+    ]
+  }
 }
