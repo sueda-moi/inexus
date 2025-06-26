@@ -1,9 +1,7 @@
 .pg002-container {
-  padding: 2rem;
   display: flex;
   flex-direction: column;
 }
-
 
 
 .pg002-textbox {
@@ -15,6 +13,7 @@
   border-radius: 0.5rem;
   word-break: break-word;
   margin-top: 1rem;
+  padding-left: 2rem;
 }
 
 .pg002-title {
@@ -34,7 +33,6 @@
   font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
   color: #2c3e50;
   line-height: 1.8;
-  max-width: 960px;
   margin: 0 auto;
 }
 

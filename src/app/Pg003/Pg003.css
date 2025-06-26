@@ -1,10 +1,10 @@
 .pg003-container {
-  padding: 2rem;
   background-color: #f9fafb;
 }
 
 .pg003-section {
   margin-bottom: 5rem;
+  padding-left: 2rem;
 }
 
 .pg003-section-title {

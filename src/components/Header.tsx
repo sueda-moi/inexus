@@ -28,7 +28,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
-  
+
   // 👇 2. screen width detection 
   useEffect(() => {
     const handleResize = () => {
@@ -67,17 +67,17 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
   return (
     <>
       <header className={`custom-header ${scrolled ? 'scrolled' : ''}`}>
-      
-              <div className="custom-header-inner">
+
+        <div className="custom-header-inner">
           <div className="logo-group">
-	  
-	              <Image src="/image/headerImg.png" alt="Logo" width={40} height={40} />
+
+            <Image src="/image/headerImg.png" alt="Logo" width={40} height={40} />
 
 
-              {!isMobile && <p className="company-name">
-                <span>ネクサステクノロジー株式会社</span>
-                <span>Shared ambition is vital nexus between us</span>
-              </p>}
+            {!isMobile && <p className="company-name">
+              <span>ネクサステクノロジー株式会社</span>
+              <span>Shared ambition is vital nexus between us</span>
+            </p>}
           </div>
 
           {!isMobile && (

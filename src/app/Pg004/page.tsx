@@ -24,12 +24,12 @@ const Pg004: React.FC = () => {
   return (
     <div className="pg004">
       {/* ⛰️ Header Banner */}
-      <div className="relative h-[25vh] w-full mb-12">
+      <div className="relative w-full h-[25vh] mb-12">
         <Image
           src="/image/pg004-image.jpg"
           alt={getMessage('Pg004', 'pg004_header_alt')}
           fill
-          className="object-cover w-full z-0"
+          className="object-cover w-full h-full"
         />
       </div>
 

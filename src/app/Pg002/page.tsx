@@ -40,7 +40,7 @@ const Pg002: React.FC = () => {
           src="/image/pg002-bktop.jpg"
           alt="Summary Background"
           fill
-          className="object-cover w-full z-0"
+          className="object-cover w-full h-full"
         />
       </div>
       <div className="pg002-textbox">

@@ -1,5 +1,4 @@
 .pg004 {
-  padding: 2rem;
   background-color: #ffffff;
   font-family: sans-serif;
 }
@@ -32,6 +31,7 @@
 
 .pg004-section {
   margin: 4rem 0;
+  padding-left: 2rem;
 }
 
 .pg004-image-wrapper {
@@ -86,7 +86,7 @@
 }
 
 /* 組織図 */
-.orgchart-block{
+.orgchart-block {
   display: flex;
   flex-direction: column;
   align-items: center;
