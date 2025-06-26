@@ -14,7 +14,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   const pathname = usePathname();
 
   // Check if the current page is the home screen (used to float the footer)
-  const isHomeScreenPage = pathname === '/Pg001';
+  // const isHomeScreenPage = pathname === '/Pg001';
 
   const LOADING_DURATION = 400;
 
@@ -125,7 +125,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       </AnimatePresence>
 
       {/* Footer (floats if on home screen) */}
-      <Footer floating={isHomeScreenPage} />
+      <Footer />
     </>
   );
 }

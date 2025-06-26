@@ -32,7 +32,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
   // 👇 2. screen width detection 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 860);
     };
     handleResize(); // init first time set up
     window.addEventListener('resize', handleResize);
@@ -60,7 +60,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
     { path: '/Pg003', label: getMessage('Pg001', 'nav_pg003') },
     { path: '/Pg004', label: getMessage('Pg001', 'nav_pg004') },
     { path: '/Pg005', label: getMessage('Pg001', 'nav_pg005') },
-    { path: '/Pg006', label: getMessage('Pg001', 'nav_pg006') },
+    // { path: '/Pg006', label: getMessage('Pg001', 'nav_pg006') },
   ];
 
 

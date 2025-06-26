@@ -24,12 +24,14 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  float: left;
+  padding-right: 2rem;
 }
 
 .company-name {
   display: flex;
   flex-direction: column;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   white-space: nowrap;
 }
 
@@ -40,7 +42,7 @@
 }
 
 .nav-item {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   text-decoration: none;
   color: rgb(96, 94, 99);
   cursor: pointer;
