@@ -35,7 +35,7 @@ const Pg002: React.FC = () => {
   return (
     <div className="pg002-container">
       {/* 🔖 Summary Section */}
-      <div className="relative h-[25vh] w-full mb-12">
+      <div className="relative w-full h-[55vh] overflow-hidden">
         <Image
           src="/image/pg002-bktop.jpg"
           alt="Summary Background"

@@ -11,7 +11,7 @@ const Pg005: React.FC = () => {
   return (
     <main className="pg005-page">
       {/* 🔹 顶部横幅图 + 标题 */}
-      <section className="relative w-full h-[25vh] mb-12">
+      <section className="relative w-full h-[55vh] overflow-hidden">
         <Image
           src="/image/pg004-bktop.jpg"
           alt="Contact Top"

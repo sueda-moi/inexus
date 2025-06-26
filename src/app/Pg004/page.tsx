@@ -24,7 +24,7 @@ const Pg004: React.FC = () => {
   return (
     <div className="pg004">
       {/* ⛰️ Header Banner */}
-      <div className="relative w-full h-[25vh] mb-12">
+      <div className="relative w-full h-[55vh] overflow-hidden">
         <Image
           src="/image/pg004-image.jpg"
           alt={getMessage('Pg004', 'pg004_header_alt')}

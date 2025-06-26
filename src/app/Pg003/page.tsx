@@ -35,7 +35,7 @@ const Pg003: React.FC = () => {
   return (
     <main className="pg003-container">
       {/* ⛰️ Header Banner */}
-      <div className="relative h-[25vh] w-full mb-12">
+      <div className="relative w-full h-[55vh] overflow-hidden">
         <Image
           src="/image/pg003-bktop.jpg"
           alt="Company Overview Background"
