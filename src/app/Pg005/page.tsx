@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import './Pg005.css';
 import ContactForm from '@/components/ContactForm/ContactForm';
@@ -8,32 +8,58 @@ import { useMessage } from '@/lib/useMessage';
 
 const Pg005: React.FC = () => {
   const getMessage = useMessage();
+
+  const [showTop, setShowTop] = useState(false);
+  const [showDown, setShowDown] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const scrollBottom = window.innerHeight + scrollY;
+      const pageHeight = document.documentElement.scrollHeight;
+      setShowTop(scrollY > 300);
+      setShowDown(scrollBottom < pageHeight - 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
   return (
     <main className="pg005-page">
       {/* 🔹 顶部横幅图 + 标题 */}
-      <section className="relative w-full h-[55vh] overflow-hidden">
+      <div className="relative w-full h-[55vh] overflow-hidden">
         <Image
           src="/image/pg004-bktop.jpg"
           alt="Contact Top"
           fill
           className="object-cover w-full h-full"
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+        <div className="pg005-img-text">
           <h1 className="text-white text-4xl font-bold">{getMessage('Pg005', 'page_title')}</h1>
         </div>
-      </section>
+      </div>
+
+      {showDown && (
+        <button className="scroll-down-btn" onClick={() => window.scrollBy({ top: window.innerHeight * 0.9, behavior: 'smooth' })}>
+          ↓
+        </button>
+      )}
 
       {/* 🔹 联系表单部分 */}
-      <section className="max-w-4xl mx-auto px-6 py-16">
-        <h2 className="text-2xl font-semibold mb-8 text-center text-gray-800">
+      <div className="pg005-page-section">
+        <h2 className="pg005-form-text">
           {getMessage('Pg005', 'form_heading')}
         </h2>
         <ContactForm />
-      </section>
+      </div>
 
       {/* 🔹 地图信息部分 */}
-      <section className="max-w-5xl mx-auto px-6 pb-24">
-        <h3 className="text-xl font-semibold mb-4 text-gray-700">{getMessage('Pg005', 'access_title')}</h3>
+      <div className="pg005-page-section">
+        <h3 className="pg005-form-text">{getMessage('Pg005', 'access_title')}</h3>
         <p className="mb-2 text-gray-600"> {getMessage('Pg005', 'access_address')}</p>
         <div className="w-full h-80 rounded overflow-hidden border">
           <iframe
@@ -44,7 +70,12 @@ const Pg005: React.FC = () => {
             title="オフィス地図"
           />
         </div>
-      </section>
+      </div>
+
+      {showTop && (
+        <button className="top-btn" onClick={scrollToTop}>↑</button>
+      )}
+
     </main>
   );
 };

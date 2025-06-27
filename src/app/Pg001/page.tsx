@@ -7,12 +7,33 @@ import Link from 'next/link';
 import ImageCarousel from '@/components/ImageCarousel/ImageCarousel';
 import SectionTitle from '@/components/Common/SectionTitle';
 import FeatureImage from '@/components/Common/FeatureImage';
+import { useEffect, useState } from 'react';
 
 
 const Pg001: React.FC = () => {
   const getMessage = useMessage();
   const rawNews = getMessage('Pg001', 'pg001_news_items');
   const newsItems: string[] = Array.isArray(rawNews) ? rawNews : [];
+
+  const [showTop, setShowTop] = useState(false);
+  const [showDown, setShowDown] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const scrollBottom = window.innerHeight + scrollY;
+      const pageHeight = document.documentElement.scrollHeight;
+      setShowTop(scrollY > 300);
+      setShowDown(scrollBottom < pageHeight - 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
 
   return (
@@ -25,6 +46,12 @@ const Pg001: React.FC = () => {
           <p>{getMessage('Pg001', 'pg001_subtitle')}</p>
         </div>
       </section>
+
+      {showDown && (
+        <button className="scroll-down-btn" onClick={() => window.scrollBy({ top: window.innerHeight * 0.9, behavior: 'smooth' })}>
+          ↓
+        </button>
+      )}
 
       {/* 📰 News Section */}
       <section className="pg001-news">
@@ -98,6 +125,10 @@ const Pg001: React.FC = () => {
         </div>
       </section>
 
+
+      {showTop && (
+        <button className="top-btn" onClick={scrollToTop}>↑</button>
+      )}
     </main>
   );
 };

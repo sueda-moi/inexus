@@ -4,7 +4,8 @@
 
 .pg003-section {
   margin-bottom: 5rem;
-  padding-left: 2rem;
+  padding: 2rem;
+
 }
 
 .pg003-section-title {
@@ -16,8 +17,8 @@
 }
 
 .pg003-summary-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: space-between;
   gap: 2rem;
 }
 
@@ -117,9 +118,10 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
   .pg003-summary-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
 
   .pg003-message-flex {

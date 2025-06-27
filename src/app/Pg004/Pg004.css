@@ -31,7 +31,7 @@
 
 .pg004-section {
   margin: 4rem 0;
-  padding-left: 2rem;
+  padding: 2rem;
 }
 
 .pg004-image-wrapper {
@@ -190,7 +190,6 @@
   }
 
   .orgchart-block {
-    width: 80%;
     padding: 0.5rem;
   }
 

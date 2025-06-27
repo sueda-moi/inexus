@@ -2,34 +2,35 @@
 
 import './Pg002.css';
 import Image from 'next/image';
-// import dynamic from 'next/dynamic';
-// import { useEffect, useRef, useState } from 'react';
 import { useMessage } from '@/lib/useMessage';
+import { useEffect, useState } from 'react';
 
-// ⚙️ 客户端加载 ScrollLottie
-// const ScrollLottie = dynamic(() => import('@/components/ScrollLottie/ScrollLottie'), { ssr: false });
+
 
 const Pg002: React.FC = () => {
-  // const sectionTeamRef = useRef<HTMLDivElement>(null);
-  // const [isAtBottom, setIsAtBottom] = useState(false);
+
   const getMessage = useMessage();
   const paragraphLines = getMessage('Pg002', 'pg002_summary_items');
 
-  // 滚动判断是否到底部
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const scrolledToBottom =
-  //       window.innerHeight + window.scrollY >= document.body.offsetHeight - 5;
-  //     setIsAtBottom(scrolledToBottom);
-  //   };
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
+  const [showTop, setShowTop] = useState(false);
+  const [showDown, setShowDown] = useState(false);
 
-  // 平滑滚动到目标区域
-  // const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
-  //   ref.current?.scrollIntoView({ behavior: 'smooth' });
-  // };
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const scrollBottom = window.innerHeight + scrollY;
+      const pageHeight = document.documentElement.scrollHeight;
+      setShowTop(scrollY > 300);
+      setShowDown(scrollBottom < pageHeight - 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
 
   return (
@@ -43,6 +44,13 @@ const Pg002: React.FC = () => {
           className="object-cover w-full h-full"
         />
       </div>
+      {showDown && (
+        <button className="scroll-down-btn" onClick={() => window.scrollBy({ top: window.innerHeight * 0.9, behavior: 'smooth' })}>
+          ↓
+        </button>
+      )}
+
+
       <div className="pg002-textbox">
         <h2 className="pg002-title">{getMessage('Pg002', 'pg002_title')}</h2>
         <div className="pg002-textcontent">
@@ -59,17 +67,10 @@ const Pg002: React.FC = () => {
 
       </div>
 
-      {/* 👇 滚动动画 */}
-      {/* {!isAtBottom && (
-        <div className="scroll-lottie-wrapper" onClick={() => scrollToSection(sectionTeamRef)}>
-          <ScrollLottie />
-        </div>
-      )} */}
 
-      {/* 📍 滚动目标区域 */}
-      {/* <div ref={sectionTeamRef} className="pg002-scroll-target">
-       
-      </div> */}
+      {showTop && (
+        <button className="top-btn" onClick={scrollToTop}>↑</button>
+      )}
     </div>
   );
 };

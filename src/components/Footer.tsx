@@ -6,6 +6,7 @@
 //import { usePathname } from 'next/navigation'; // 現在のパスを取得するためのフック
 //import { useTranslation } from 'react-i18next';
 import { useMessage } from '@/lib/useMessage';
+import './Footer.css';
 
 
 interface FooterProps {
@@ -35,7 +36,7 @@ const Footer: React.FC<FooterProps> = () => {
 
       <div className="w-full leading-[0.5] ">
         <div className='bottom-0 text-center'>
-          <p>{getMessage('Pg001', 'footer_copyright')}</p>
+          <p className='footer-text'>{getMessage('Pg001', 'footer_copyright')}</p>
         </div>
 
       </div>

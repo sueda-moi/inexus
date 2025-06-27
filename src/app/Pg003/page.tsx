@@ -1,39 +1,41 @@
 'use client';
 
 import './Pg003.css';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import dynamic from 'next/dynamic';
 import { useMessage } from '@/lib/useMessage';
 import { GreetingSection } from '@/components/GreetingSection/GreetingSection';
 import { CompanyTimeline } from '@/components/CompanyTimeline/CompanyTimeline';
 
-const ScrollLottie = dynamic(() => import('@/components/ScrollLottie/ScrollLottie'), { ssr: false });
-
 const Pg003: React.FC = () => {
-  const [isAtBottom, setIsAtBottom] = useState(false);
-  const sectionTeamRef = useRef<HTMLDivElement>(null);
   const getMessage = useMessage();
   const paragraphLines1 = getMessage('Pg003', 'pg003_parent_items');
   const paragraphLines2 = getMessage('Pg003', 'pg003_subsidiary_items');
+  const [showTop, setShowTop] = useState(false);
+  const [showDown, setShowDown] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const fullHeight = document.documentElement.scrollHeight;
-      setIsAtBottom(scrollTop + windowHeight >= fullHeight - 20);
+      const scrollY = window.scrollY;
+      const scrollBottom = window.innerHeight + scrollY;
+      const pageHeight = document.documentElement.scrollHeight;
+      setShowTop(scrollY > 300);
+      setShowDown(scrollBottom < pageHeight - 100);
     };
+
     window.addEventListener('scroll', handleScroll);
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
-    ref.current?.scrollIntoView({ behavior: 'smooth' });
-  };
+
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   return (
     <main className="pg003-container">
+
+
+
       {/* ⛰️ Header Banner */}
       <div className="relative w-full h-[55vh] overflow-hidden">
         <Image
@@ -43,6 +45,13 @@ const Pg003: React.FC = () => {
           className="object-cover w-full h-full"
         />
       </div>
+
+      {showDown && (
+        <button className="scroll-down-btn" onClick={() => window.scrollBy({ top: window.innerHeight * 0.9, behavior: 'smooth' })}>
+          ↓
+        </button>
+      )}
+
 
       {/* 💬 Section 1: Vision Message */}
       <section className="pg003-section" id="vision">
@@ -67,7 +76,7 @@ const Pg003: React.FC = () => {
       <section className="pg003-section" id="summary">
         <h2 className="pg003-section-title">{getMessage('Pg003', 'pg003_summary_title')}</h2>
 
-        <div className="pg003-summary-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
+        <div className="pg003-summary-grid">
           {/* 🎴 Left: Parent Company */}
           <div className="pg003-card" style={{ padding: '2rem', backgroundColor: '#ffffff', boxShadow: '0 6px 16px rgba(0, 0, 0, 0.1)', borderRadius: '12px' }}>
             <h3 className="pg003-card-title" style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>{getMessage('Pg003', 'pg003_parent_title')}</h3>
@@ -99,12 +108,10 @@ const Pg003: React.FC = () => {
 
       </section>
 
-      {/* 👉 Scroll hint */}
-      {!isAtBottom && (
-        <div className="scroll-lottie-wrapper">
-          <ScrollLottie onClick={() => scrollToSection(sectionTeamRef)} />
-        </div>
+      {showTop && (
+        <button className="top-btn" onClick={scrollToTop}>↑</button>
       )}
+
     </main>
   );
 };

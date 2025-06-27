@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import './Pg004.css';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import OrgChartTree from '@/components/OrgChartTree/OrgChartTree';
 import { useMessage } from '@/lib/useMessage';
 
@@ -21,6 +21,26 @@ const Pg004: React.FC = () => {
 
   const services = getMessage('Pg004', 'pg004_services');
 
+  const [showTop, setShowTop] = useState(false);
+  const [showDown, setShowDown] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const scrollBottom = window.innerHeight + scrollY;
+      const pageHeight = document.documentElement.scrollHeight;
+      setShowTop(scrollY > 300);
+      setShowDown(scrollBottom < pageHeight - 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
   return (
     <div className="pg004">
       {/* ⛰️ Header Banner */}
@@ -32,6 +52,12 @@ const Pg004: React.FC = () => {
           className="object-cover w-full h-full"
         />
       </div>
+
+      {showDown && (
+        <button className="scroll-down-btn" onClick={() => window.scrollBy({ top: window.innerHeight * 0.9, behavior: 'smooth' })}>
+          ↓
+        </button>
+      )}
 
       {/* 服务种类 */}
       <section className="pg004-section">
@@ -54,6 +80,12 @@ const Pg004: React.FC = () => {
           <OrgChartTree />
         </div>
       </section>
+
+
+
+      {showTop && (
+        <button className="top-btn" onClick={scrollToTop}>↑</button>
+      )}
     </div>
   );
 };

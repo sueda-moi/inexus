@@ -59,7 +59,71 @@ body {
   }
 }
 
+.top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 1rem;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 999;
+  transition: background-color 0.3s ease;
+}
 
+.top-btn:hover {
+  background-color: #0c5dc0;
+}
 
+@media screen and (max-width: 600px) {
+  .top-btn {
+    right: 1rem;
+    bottom: 1rem;
+    padding: 0.4rem 0.6rem;
+    font-size: 1.2rem;
+  }
+  
+}
 
+.scroll-down-btn {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 998;
+  animation: bounce 1.6s infinite;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-down-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -10px);
+  }
+}
 
