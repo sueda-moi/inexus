@@ -5,6 +5,8 @@ import Image from 'next/image';
 import { useMessage } from '@/lib/useMessage';
 import Link from 'next/link';
 import ImageCarousel from '@/components/ImageCarousel/ImageCarousel';
+import SectionTitle from '@/components/Common/SectionTitle';
+import FeatureImage from '@/components/Common/FeatureImage';
 
 
 const Pg001: React.FC = () => {
@@ -26,7 +28,7 @@ const Pg001: React.FC = () => {
 
       {/* 📰 News Section */}
       <section className="pg001-news">
-        <h2 className="pg001-section-title">{getMessage('Pg001', 'pg001_news_title')}</h2>
+        <SectionTitle text={getMessage('Pg001', 'pg001_news_title')} />
         <ul className="pg001-news-list">
           {newsItems.map((item, index) => (
             <li key={index}>
@@ -40,50 +42,56 @@ const Pg001: React.FC = () => {
       </section>
 
       {/* 🏢 Intro Section */}
-      <section className="pg001-intro">
+      <section className='pg001-intro'>
         <div className="pg001-intro-content">
+
+          {/* 文本区域 */}
           <div className="pg001-intro-text">
-            <h3>{getMessage('Pg001', 'pg001_intro_title')}</h3>
-            <p>{getMessage('Pg001', 'pg001_intro_paragraph')}</p>
+            <h3 className="text-3xl font-bold text-gray-900">
+              {getMessage('Pg001', 'pg001_intro_title')}
+            </h3>
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+              {getMessage('Pg001', 'pg001_intro_paragraph')}
+            </p>
             <Link href="/Pg003">
-              <div className="pg001-intro-more">View more</div>
+              <div className="inline-block mt-4 bg-blue-600 text-white font-medium px-5 py-2 rounded-md hover:bg-blue-800 transition">
+                View more
+              </div>
             </Link>
           </div>
+
+          {/* 图片区域 */}
           <div className="pg001-intro-image">
             <Image
               src="/image/pg001-intro.jpg"
               alt="Intro"
-              width={300}
-              height={200}
+              width={1020}
+              height={800}
+              className="w-full h-full rounded-lg shadow-lg"
             />
           </div>
         </div>
       </section>
 
 
+
+
       {/* ⭐ Features Section */}
       <section className="pg001-features">
-        <h2 className="pg001-section-title">{getMessage('Pg001', 'pg001_features_title')}</h2>
+        <SectionTitle text={getMessage('Pg001', 'pg001_features_title')} />
         <div className="pg001-feature-grid">
           <div className="pg001-feature-card">
-            <Image src="/image/pg001-feature1.jpg" alt="Feature 1" className='pg001-feature1-jpg'
-              layout="responsive"
-              width={4}
-              height={3} />
+            <FeatureImage src="/image/pg001-feature1.jpg" alt="Feature 1" />
             <h4>① {getMessage('Pg001', 'pg001_feature1_title')}</h4>
             <p>{getMessage('Pg001', 'pg001_feature1_desc')}</p>
           </div>
           <div className="pg001-feature-card">
-            <Image src="/image/pg001-feature2.jpg" alt="Feature 2" className='pg001-feature2-jpg' layout="responsive"
-              width={4}
-              height={3} />
+            <FeatureImage src="/image/pg001-feature2.jpg" alt="Feature 2" />
             <h4>② {getMessage('Pg001', 'pg001_feature2_title')}</h4>
             <p>{getMessage('Pg001', 'pg001_feature2_desc')}</p>
           </div>
           <div className="pg001-feature-card">
-            <Image src="/image/pg001-feature3.jpg" alt="Feature 3" className='pg001-feature3-jpg' layout="responsive"
-              width={4}
-              height={3} />
+            <FeatureImage src="/image/pg001-feature3.jpg" alt="Feature 3" />
             <h4>③ {getMessage('Pg001', 'pg001_feature3_title')}</h4>
             <p>{getMessage('Pg001', 'pg001_feature3_desc')}</p>
           </div>

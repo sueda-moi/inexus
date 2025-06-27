@@ -1,0 +1,15 @@
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1e293b;
+  border-left: 6px solid #2563eb;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 1.4rem;
+    padding-left: 0.75rem;
+  }
+}
