@@ -7,13 +7,12 @@
 .pg002-textbox {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   color: #474242;
-  width: 100%;
   display: inline-block;
   background-color: transparent;
   border-radius: 0.5rem;
   word-break: break-word;
   margin-top: 1rem;
-  padding-left: 2rem;
+  padding: 1rem;
 }
 
 .pg002-title {

@@ -30,8 +30,7 @@
 }
 
 .pg004-section {
-  margin: 4rem 0;
-  padding: 2rem;
+  margin: 2rem 0;
 }
 
 .pg004-image-wrapper {
@@ -49,9 +48,8 @@
 
 .pg004-card {
   background-color: #f6f6f6;
-  border-radius: 12px;
-  padding: 1rem 2rem;
-  min-width: 200px;
+  border-radius: 0.2rem;
+  padding: 1rem;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   font-weight: 500;
@@ -153,7 +151,7 @@
   }
 
   .pg004-section {
-    margin: 2rem 0;
+    margin: 1rem 0;
   }
 
   .pg004-card-grid {
@@ -163,7 +161,7 @@
   }
 
   .pg004-card {
-    padding: 1rem;
+    padding: 0.25rem;
     font-size: 0.95rem;
   }
 
