@@ -1,0 +1,146 @@
+.orgchart-scroll-wrapper {
+  overflow-x: auto;
+  padding: 1rem;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  max-width: 100%;
+  padding-bottom: 1rem;
+}
+
+.orgchart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 1000px;
+}
+
+/* 顶部 CEO */
+.orgchart-ceo {
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 0.75rem 2rem;
+  background-color: #2563eb;
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+}
+
+/* CEO 到第二层之间的线 */
+.orgchart-vertical-line {
+  width: 2px;
+  height: 30px;
+  background-color: #2563eb;
+  margin-bottom: 1rem;
+}
+
+/* 第二层包裹层 */
+.orgchart-departments-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* 横向连线连接所有部门 */
+.orgchart-horizontal-line {
+  position: absolute;
+  top: 0;
+  height: 2px;
+  background-color: #2563eb;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+/* 部门行 */
+.orgchart-departments {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1rem;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+/* 每个部门外层块 */
+.orgchart-department-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* 连接部门的垂直线 */
+.orgchart-line-down {
+  width: 2px;
+  height: 20px;
+  background-color: #2563eb;
+  margin-bottom: 0.3rem;
+}
+
+.orgchart-line-down.small {
+  height: 14px;
+}
+
+/* 部门名称框 */
+.orgchart-department-title {
+  background-color: #e0edff;
+  border: 1.5px solid #2563eb;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+/* 子项区 */
+.orgchart-children {
+  position: relative;
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+/* 子项横线 */
+.orgchart-children-connector {
+  position: absolute;
+  top: 0;
+  height: 2px;
+  left: 0;
+  right: 0;
+  background-color: #2563eb;
+  z-index: 0;
+}
+
+/* 子项连线 */
+.orgchart-line-to-child {
+  width: 2px;
+  height: 14px;
+  background-color: #2563eb;
+  margin-bottom: 0.3rem;
+}
+
+/* 子项框外包裹（用于放线） */
+.orgchart-child-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+/* 子项框 */
+.orgchart-child-box {
+  background-color: #fff;
+  border: 1px solid #94a3b8;
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.75rem;
+  color: #334155;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

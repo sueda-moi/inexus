@@ -46,5 +46,46 @@
     "Established: June 19, 2017",
     "Representative: Kazushi Saito",
     "Employees: Approx. 30 Japanese SEs"
-  ]
+  ],
+  "pg003_orgchart_title": "Organizational Chart (Interactive)",
+  "pg003_orgchart_data": {
+    "ceo": "President & CEO",
+    "departments": [
+      {
+        "title": "Corporate Planning Dept."
+      },
+      {
+        "title": "Sales Dept."
+      },
+      {
+        "title": "Finance Business Dept.",
+        "children": [
+          "Core System Operations",
+          "Peripheral System Operations",
+          "AWS & Server Infrastructure"
+        ]
+      },
+      {
+        "title": "Corporate Business Dept.",
+        "children": [
+          "Life & Non-life Insurance",
+          "Small-scale Insurance",
+          "Server Infrastructure"
+        ]
+      },
+      {
+        "title": "Business Promotion Dept.",
+        "children": [
+          "Embedded Systems",
+          "Growth Areas"
+        ]
+      },
+      {
+        "title": "Group Company Strategy Office",
+        "children": [
+          "Nexfa Co., Ltd."
+        ]
+      }
+    ]
+  }
 }

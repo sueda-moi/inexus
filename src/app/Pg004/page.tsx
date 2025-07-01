@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import './Pg004.css';
 import React, { useEffect, useState } from 'react';
-import OrgChartTree from '@/components/OrgChartTree/OrgChartTree';
 import { useMessage } from '@/lib/useMessage';
 
 const Pg004: React.FC = () => {
@@ -73,13 +72,7 @@ const Pg004: React.FC = () => {
         </div>
       </section>
 
-      {/* 组织架构图 */}
-      <section className="pg004-section orgchart-block">
-        <h2 id="organization">{getMessage('Pg004', 'pg004_orgchart_title')}</h2>
-        <div className="pg004-orgchart-wrapper">
-          <OrgChartTree />
-        </div>
-      </section>
+
 
 
 

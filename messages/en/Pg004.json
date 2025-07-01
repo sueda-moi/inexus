@@ -14,29 +14,5 @@
       "title": "Solution Development",
       "desc": "We provide end-to-end solutions from system development to operations, maintenance, and security, tailored to customer challenges and business transformation."
     }
-  ],
-  "pg004_orgchart_title": "Organizational Chart (Interactive)",
-  "pg004_orgchart_data": {
-    "ceo": "President & CEO",
-    "departments": [
-      { "title": "Corporate Planning Dept." },
-      { "title": "Sales Dept." },
-      {
-        "title": "Finance Business Dept.",
-        "children": ["Core System Operations", "Peripheral System Operations", "AWS & Server Infrastructure"]
-      },
-      {
-        "title": "Corporate Business Dept.",
-        "children": ["Life & Non-life Insurance", "Small-scale Insurance", "Server Infrastructure"]
-      },
-      {
-        "title": "Business Promotion Dept.",
-        "children": ["Embedded Systems", "Growth Areas"]
-      },
-      {
-        "title": "Group Company Strategy Office",
-        "children": ["Nexfa Co., Ltd."]
-      }
-    ]
-  }
+  ]
 }

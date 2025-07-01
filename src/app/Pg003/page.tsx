@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { useMessage } from '@/lib/useMessage';
 import { GreetingSection } from '@/components/GreetingSection/GreetingSection';
 import { CompanyTimeline } from '@/components/CompanyTimeline/CompanyTimeline';
+import OrgChartTree from '@/components/OrgChartTree/OrgChartTree';
 
 const Pg003: React.FC = () => {
   const getMessage = useMessage();
@@ -106,6 +107,15 @@ const Pg003: React.FC = () => {
           </div>
         </div>
 
+      </section>
+
+
+      {/* 组织架构图 */}
+      <section className="pg003-section" id="orgchart">
+        <h2 className="pg003-section-title">{getMessage('Pg003', 'pg003_orgchart_title')}</h2>
+        <div className="pg003-orgchart-wrapper">
+          <OrgChartTree />
+        </div>
       </section>
 
       {showTop && (
