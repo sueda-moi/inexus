@@ -14,7 +14,7 @@
   min-width: 1000px;
 }
 
-/* 顶部 CEO */
+/* CEO card */
 .orgchart-ceo {
   font-size: 1.25rem;
   font-weight: bold;
@@ -24,23 +24,30 @@
   border-radius: 8px;
   margin-bottom: 0.5rem;
   letter-spacing: 0.1em;
+  transition: box-shadow 0.3s, transform 0.3s;
 }
 
-/* CEO 到第二层之间的线 */
+.orgchart-ceo:hover {
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+  transform: scale(1.03);
+}
+
+/* Vertical line between CEO and departments */
 .orgchart-vertical-line {
   width: 2px;
   height: 30px;
   background-color: #2563eb;
   margin-bottom: 1rem;
+  transition: background-color 0.3s;
 }
 
-/* 第二层包裹层 */
+/* Department wrapper */
 .orgchart-departments-wrapper {
   position: relative;
   width: 100%;
 }
 
-/* 横向连线连接所有部门 */
+/* Horizontal line connecting departments */
 .orgchart-horizontal-line {
   position: absolute;
   top: 0;
@@ -51,7 +58,7 @@
   z-index: 0;
 }
 
-/* 部门行 */
+/* Department row */
 .orgchart-departments {
   display: flex;
   gap: 2rem;
@@ -61,7 +68,7 @@
   position: relative;
 }
 
-/* 每个部门外层块 */
+/* Department block container */
 .orgchart-department-block {
   display: flex;
   flex-direction: column;
@@ -70,19 +77,20 @@
   z-index: 1;
 }
 
-/* 连接部门的垂直线 */
+/* Vertical line from horizontal bar to department card */
 .orgchart-line-down {
   width: 2px;
   height: 20px;
   background-color: #2563eb;
   margin-bottom: 0.3rem;
+  transition: background-color 0.3s;
 }
 
 .orgchart-line-down.small {
   height: 14px;
 }
 
-/* 部门名称框 */
+/* Department card (vertical text) */
 .orgchart-department-title {
   background-color: #e0edff;
   border: 1.5px solid #2563eb;
@@ -94,9 +102,15 @@
   font-size: 0.85rem;
   font-weight: 500;
   color: #1e293b;
+  transition: box-shadow 0.3s, transform 0.3s;
 }
 
-/* 子项区 */
+.orgchart-department-title:hover {
+  box-shadow: 0 2px 8px rgba(30, 41, 59, 0.1);
+  transform: scale(1.03);
+}
+
+/* Child area */
 .orgchart-children {
   position: relative;
   display: flex;
@@ -105,7 +119,7 @@
   padding-top: 0.5rem;
 }
 
-/* 子项横线 */
+/* Connector line for children row */
 .orgchart-children-connector {
   position: absolute;
   top: 0;
@@ -116,15 +130,16 @@
   z-index: 0;
 }
 
-/* 子项连线 */
+/* Vertical line from connector to each child */
 .orgchart-line-to-child {
   width: 2px;
   height: 14px;
   background-color: #2563eb;
   margin-bottom: 0.3rem;
+  transition: background-color 0.3s;
 }
 
-/* 子项框外包裹（用于放线） */
+/* Wrapper around child box for line alignment */
 .orgchart-child-block {
   display: flex;
   flex-direction: column;
@@ -132,7 +147,7 @@
   z-index: 1;
 }
 
-/* 子项框 */
+/* Child card */
 .orgchart-child-box {
   background-color: #fff;
   border: 1px solid #94a3b8;
@@ -143,4 +158,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.orgchart-child-box:hover {
+  box-shadow: 0 2px 6px rgba(148, 163, 184, 0.3);
+  transform: scale(1.04);
 }

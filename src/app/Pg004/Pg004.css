@@ -83,10 +83,82 @@
   padding-bottom: 2rem;
 }
 
+.pg004-business-field-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.pg004-business-field-block {
+  background-color: #f0f4ff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.pg004-business-field-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.pg004-business-field-list {
+  padding-left: 1.2rem;
+  list-style-type: disc;
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
 
 
+/* 🖼️ Wrapper to center the image and add padding */
+.pg004-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
 
-/* 組織図 */
+/* 🌟 Responsive image with subtle shadow and scaling effect */
+.pg004-img-shadow {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pg004-img-shadow:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* 📱 Mobile optimization */
+@media (max-width: 768px) {
+  .pg004-img-shadow {
+    border-radius: 0.5rem;
+  }
+}
+
+.geo-map-svg {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: 2rem auto;
+  display: block;
+}
+
+
+.pg004-section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 2rem;
+  text-align: left;
+}
 
 @media screen and (max-width: 768px) {
   .pg004 {
@@ -141,5 +213,11 @@
   .pg004-footer {
     font-size: 0.75rem;
     margin-top: 3rem;
+  }
+
+  .pg004-section-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+
   }
 }
