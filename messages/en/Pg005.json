@@ -2,15 +2,17 @@
   "page_title": "Contact",
   "form_heading": "Please feel free to contact us using the form below.",
   "access_title": "Access",
-  "access_address": "3-10-14 Higashi-Nihonbashi, Chuo-ku, Tokyo 103-0004",
+  "access_address": "Sunrise Tachibana Building, 7th Floor 10-14, Higashi-Nihonbashi 3-chome, Chuo-ku, Tokyo 103-0004",
 
   "form_name_label": "Name",
+   "form_company_label": "Company Name (optional)",
   "form_phone_label": "Phone Number",
   "form_email_label": "Email Address",
   "form_message_label": "Message",
 
   "form_phone_placeholder": "090-xxxx-xxxx",
   "form_email_placeholder": "example@example.com",
+  "form_company_placeholder": "(e.g.) Nexus Technology Inc.",
 
   "form_submit_button": "Submit",
   "form_submitting": "Submitting...",

@@ -2,15 +2,17 @@
   "page_title": "お問い合わせ",
   "form_heading": "ご質問・ご相談はこちらからご連絡ください",
   "access_title": "アクセス",
-  "access_address": "〒103-0004 東京都中央区東日本橋3-10-14",
+  "access_address": "〒103-0004 東京都中央区東日本橋３丁目１０−１４ サンライズ橘ビル７F",
 
   "form_name_label": "お名前",
+  "form_company_label": "会社名（任意）",
   "form_phone_label": "電話番号",
   "form_email_label": "メールアドレス",
   "form_message_label": "お問い合わせ内容",
 
   "form_phone_placeholder": "090-xxxx-xxxx",
   "form_email_placeholder": "example@example.com",
+  "form_company_placeholder": "（例）ネクサステクノロジー株式会社",
 
   "form_submit_button": "送信する",
   "form_submitting": "送信中…",

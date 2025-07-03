@@ -1,57 +1,60 @@
 {
-  "pg004_header_alt": "Business Structure Chart",
-  "pg004_services_title": "Service Structure",
+  "pg004_header_alt": "Business Structure Diagram",
+  "pg004_services_title": "Service Categories",
   "pg004_services": [
     {
-      "title": "Social Infrastructure Business",
-      "desc": "We support the realization of a safe and secure society by building and operating systems for public services such as administration, transportation, and healthcare."
+      "title": "Social Infrastructure",
+      "desc": "We support the realization of a safe and secure society through the construction and operation of systems that underpin society, such as government, transportation, and healthcare.",
+      "fields": ["Consulting Business", "Infrastructure Development"]
     },
     {
-      "title": "Next Core Business Group",
-      "desc": "We actively promote new businesses utilizing AI, IoT, and cloud technologies to foster the next generation of growth engines."
+      "title": "Next-Generation Growth",
+      "desc": "We actively promote new businesses utilizing AI, IoT, and cloud technologies to cultivate future growth engines.",
+      "fields": ["IT Business"]
     },
     {
       "title": "Solution Development",
-      "desc": "We provide end-to-end solutions including system development, maintenance, and security to support business transformation tailored to client needs."
+      "desc": "We provide end-to-end services from system development, maintenance, to security solutions tailored to client needs, driving business transformation.",
+      "fields": ["IT Business", "Real Estate Business"]
     }
   ],
-  "pg004_business_fields_title": "Major Business Fields",
+  "pg004_business_fields_title": "Main Business Fields",
   "pg004_business_fields": [
     {
       "category": "IT Business",
       "items": [
-        "Business Application Development: Core system development for finance (banking, credit cards, securities), insurance, and life/non-life insurance",
-        "Public DX: Local government systems and DX support utilizing generative AI",
-        "Embedded Systems: In-vehicle audio, autonomous driving control and verification",
-        "Telecommunications: Development and testing of communication equipment"
+        "Business application development: Core systems for banking, credit cards, securities, insurance",
+        "Public DX: Systems and Gen-AI-based DX support for municipalities",
+        "Embedded Systems: In-car audio, autonomous driving control and testing",
+        "Telecom: Device development and testing"
       ]
     },
     {
-      "category": "Infrastructure Construction & Development",
+      "category": "Infrastructure Development",
       "items": [
-        "Cloud-based infrastructure construction and development (AWS / Azure)",
+        "Cloud-based infrastructure development (AWS / Azure)",
         "On-premise infrastructure construction and maintenance"
       ]
     },
     {
       "category": "Consulting Business",
       "items": [
-        "Smart City Solutions",
-        "Cloud services for transportation, food safety, and education",
-        "Electronic money, mobile payments, internet payments",
-        "Support for Japanese companies operating locally in China"
+        "Smart City initiatives",
+        "Cloud services for transport, food safety, education",
+        "E-money, mobile and online payment solutions",
+        "Support for Japanese companies operating in China"
       ]
     },
     {
       "category": "Real Estate Business",
       "items": [
-        "Land and apartment transactions",
-        "Construction and sales",
-        "Rental of investment properties such as stores"
+        "Land and apartment sales",
+        "Construction and housing sales",
+        "Rental of investment properties such as shops"
       ]
     }
   ],
-  "pg004_clients_title": "List of Major Clients",
-  "pg004_clients_alt": "Diagram of Major Partner Companies",
-  "geo-map-section": "Global Perspective"
+  "pg004_clients_title": "Major Clients",
+  "pg004_clients_alt": "Diagram of Major Client Companies",
+  "geo-map-section": "Global Presence"
 }

@@ -4,23 +4,30 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
 
-    const lambdaUrl = 'https://36pekstyczqpghl3tvtptkdg240pxmqi.lambda-url.ap-northeast-1.on.aws/';
-
+    const lambdaUrl = 'https://ekojfombjwi6jm3kzi2kixpx2i0cfbal.lambda-url.ap-northeast-1.on.aws/';
     const response = await fetch(lambdaUrl, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body),
     });
 
-    const result = await response.text(); // lambda 可能返回 text
+    const rawText = await response.text();
+    console.log('Lambda raw response:', rawText); 
+    console.log('Lambda response.ok:', response.ok, 'status:', response.status);
 
-    if (!response.ok) {
-      return NextResponse.json({ error: 'Lambda failed', detail: result }, { status: 502 });
+    let parsed;
+    try {
+      parsed = JSON.parse(rawText);
+    } catch {
+      console.warn('Lambda 返回非 JSON 格式:', rawText);
+      parsed = null;
     }
 
-    return NextResponse.json({ message: 'Success', lambdaResult: result });
+    if (!response.ok) {
+      return NextResponse.json({ error: 'Lambda failed', detail: parsed || rawText }, { status: 502 });
+    }
+
+    return NextResponse.json({ message: 'Success', lambdaResult: parsed || rawText });
   } catch (err) {
     console.error('中转错误:', err);
     return NextResponse.json({ error: 'Server error' }, { status: 500 });

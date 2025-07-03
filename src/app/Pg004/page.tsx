@@ -6,15 +6,26 @@ import React, { useEffect, useState } from 'react';
 import { useMessage } from '@/lib/useMessage';
 import CustomGeoMap from '@/components/CustomGeoMap/CustomGeoMap';
 
-
 type BusinessField = {
   category: string;
   items: string[];
 };
 
+type Service = {
+  title: string;
+  desc: string;
+  fields?: string[]; // Optional: link to related BusinessField.category
+};
+
 const Pg004: React.FC = () => {
   const getMessage = useMessage();
 
+  const services = getMessage('Pg004', 'pg004_services') as unknown as Service[];
+  const fields = getMessage('Pg004', 'pg004_business_fields') as unknown as BusinessField[];
+
+  const [showTop, setShowTop] = useState(false);
+  const [showDown, setShowDown] = useState(false);
+  const [activeTab, setActiveTab] = useState<'services' | 'fields'>('services');
 
   useEffect(() => {
     const hash = window.location.hash;
@@ -25,12 +36,6 @@ const Pg004: React.FC = () => {
       }
     }
   }, []);
-
-  const services = getMessage('Pg004', 'pg004_services');
-  const fields = getMessage('Pg004', 'pg004_business_fields') as unknown as BusinessField[];
-
-  const [showTop, setShowTop] = useState(false);
-  const [showDown, setShowDown] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,7 +50,6 @@ const Pg004: React.FC = () => {
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
@@ -62,43 +66,65 @@ const Pg004: React.FC = () => {
       </div>
 
       {showDown && (
-        <button className="scroll-down-btn" onClick={() => window.scrollBy({ top: window.innerHeight * 0.9, behavior: 'smooth' })}>
+        <button
+          className="scroll-down-btn"
+          onClick={() => window.scrollBy({ top: window.innerHeight * 0.9, behavior: 'smooth' })}
+        >
           ↓
         </button>
       )}
 
-      {/* 服务种类 */}
+      {/* Tab Buttons */}
       <section className="pg004-section">
-        <h2 className="pg004-section-title" id="services">{getMessage('Pg004', 'pg004_services_title')}</h2>
-        <div className="pg004-card-grid">
-          {Array.isArray(services) &&
-            services.map((service, index) => (
-              <div className="pg004-card" key={index}>
-                <h3>{service.title}</h3>
-                <p>{service.desc}</p>
+        <h2 className="pg004-section-title" id="services">
+          {getMessage('Pg004', 'pg004_services_title')}
+        </h2>
+        <div className="pg004-tab-buttons">
+          <button
+            className={`pg004-tab-button ${activeTab === 'services' ? 'active' : ''}`}
+            onClick={() => setActiveTab('services')}
+          >
+            {getMessage('Pg004', 'pg004_services_title')}
+          </button>
+          <button
+            className={`pg004-tab-button ${activeTab === 'fields' ? 'active' : ''}`}
+            onClick={() => setActiveTab('fields')}
+          >
+            {getMessage('Pg004', 'pg004_business_fields_title')}
+          </button>
+        </div>
+
+
+        {/* Tab Content */}
+        {activeTab === 'services' && (
+          <div className="pg004-card-grid">
+            {Array.isArray(services) &&
+              services.map((service, index) => (
+                <div className="pg004-card" key={index}>
+                  <h3>{service.title}</h3>
+                  <p>{service.desc}</p>
+                </div>
+              ))}
+          </div>
+        )}
+
+        {activeTab === 'fields' && (
+          <div className="pg004-business-field-wrapper">
+            {fields.map((field, index) => (
+              <div key={index} className="pg004-business-field-block">
+                <h3 className="pg004-business-field-title">{field.category}</h3>
+                <ul className="pg004-business-field-list">
+                  {field.items.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
               </div>
             ))}
-        </div>
+          </div>
+        )}
       </section>
 
-      <section className="pg004-section">
-        <h2 className="pg004-section-title">{getMessage('Pg004', 'pg004_business_fields_title')}</h2>
-        <div className="pg004-business-field-wrapper">
-          {fields.map((field, index) => (
-            <div key={index} className="pg004-business-field-block">
-              <h3 className="pg004-business-field-title">{field.category}</h3>
-              <ul className="pg004-business-field-list">
-                {field.items.map((item, idx) => (
-                  <li key={idx}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
-
-      {/* 🧑‍💼 Major Clients Section (Image-based) */}
+      {/* 🧑‍💼 Major Clients Section */}
       <section className="pg004-section">
         <h2 className="pg004-section-title">{getMessage('Pg004', 'pg004_clients_title')}</h2>
         <div className="pg004-image-wrapper">
@@ -112,21 +138,16 @@ const Pg004: React.FC = () => {
         </div>
       </section>
 
+      {/* 🗺️ Map Section */}
       <section className="geo-map-section">
         <h2 className="pg004-section-title">{getMessage('Pg004', 'geo-map-section')}</h2>
         <CustomGeoMap />
       </section>
 
-
-
-
-
-
-
-
-
       {showTop && (
-        <button className="top-btn" onClick={scrollToTop}>↑</button>
+        <button className="top-btn" onClick={scrollToTop}>
+          ↑
+        </button>
       )}
     </div>
   );

@@ -2,20 +2,18 @@
   "page_title": "联系我们",
   "form_heading": "如有任何问题或合作意向，欢迎通过下方表单与我们联系。",
   "access_title": "访问地址",
-  "access_address": "日本东京都中央区东日本桥3-10-14，邮编103-0004",
-
+  "access_address": "日本东京都中央区东日本桥三丁目10番14号 日升橘大厦 7楼，邮编103-0004",
   "form_name_label": "姓名",
+  "form_company_label": "公司名称（选填）",
   "form_phone_label": "电话号码",
   "form_email_label": "电子邮箱",
   "form_message_label": "留言内容",
-
   "form_phone_placeholder": "090-xxxx-xxxx",
   "form_email_placeholder": "example@example.com",
-
+  "form_company_placeholder": "（例如）Nexus科技有限公司",
   "form_submit_button": "提交",
   "form_submitting": "提交中…",
   "form_success_message": "您的信息已成功发送，感谢联系！",
-
   "toast_missing_name": "请填写姓名。",
   "toast_missing_contact": "请填写电话号码或邮箱中的任意一项。",
   "toast_success": "发送成功！",
