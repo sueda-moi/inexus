@@ -17,15 +17,27 @@ export default function RevenueChart() {
   const getMessage = useMessage();
   const title = getMessage('Pg004', 'pg004_chart_revenue_title');
   const unit = getMessage('Pg004', 'pg004_chart_axis_revenue_unit');
+  const estimatedSuffix = getMessage('Pg004', 'pg004_chart_estimated_suffix');
 
   return (
     <ChartCard title={title}>
       <ResponsiveContainer>
         <BarChart data={threeYearPlanData}>
           <CartesianGrid strokeDasharray="3 3" vertical={false} />
-          <XAxis dataKey="year" tick={{ fontSize: 14 }} />
+          <XAxis
+            dataKey="year"
+            tick={{ fontSize: 14 }}
+            tickFormatter={(year) =>
+              year === '2025' ? `${year}${estimatedSuffix}` : year
+            }
+          />
           <YAxis tick={{ fontSize: 14 }} unit={unit} />
-          <Tooltip formatter={(value: number) => `${value} ${unit}`} />
+          <Tooltip
+            formatter={(value: number, name: string, props) => {
+              const isEstimated = props.payload?.year === '2025';
+              return [`${value} ${unit}${isEstimated ? estimatedSuffix : ''}`, name];
+            }}
+          />
           <defs>
             <linearGradient id="revenueGradient" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor="#6366f1" stopOpacity={0.9} />

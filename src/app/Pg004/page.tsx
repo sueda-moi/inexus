@@ -128,7 +128,7 @@ const Pg004: React.FC = () => {
           {planDetails.map((yearDetails, idx) => (
             <div key={idx} className="plan-card">
               <h4 className="plan-title">
-                {threeYearPlanData[idx]?.year}の事業内容
+                {threeYearPlanData[idx]?.year}{getMessage('Pg004', 'pg004_chart_section_title_suffix')}
               </h4>
               <ul className="plan-list">
                 {yearDetails.map((line, i) => (

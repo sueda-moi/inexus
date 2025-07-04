@@ -21,15 +21,27 @@ export default function WorkforceChart() {
   const unit = getMessage('Pg004', 'pg004_chart_axis_workforce_unit');
   const labelEmployees = getMessage('Pg004', 'pg004_chart_legend_employees');
   const labelContractors = getMessage('Pg004', 'pg004_chart_legend_contractors');
+  const estimatedSuffix = getMessage('Pg004', 'pg004_chart_estimated_suffix');
 
   return (
     <ChartCard title={title}>
       <ResponsiveContainer>
         <BarChart data={threeYearPlanData}>
           <CartesianGrid strokeDasharray="3 3" vertical={false} />
-          <XAxis dataKey="year" tick={{ fontSize: 14 }} />
+          <XAxis
+            dataKey="year"
+            tick={{ fontSize: 14 }}
+            tickFormatter={(year) =>
+              year === '2025' ? `${year}${estimatedSuffix}` : year
+            }
+          />
           <YAxis tick={{ fontSize: 14 }} unit={unit} />
-          <Tooltip />
+          <Tooltip
+            formatter={(value: number, name: string, props) => {
+              const isEstimated = props.payload?.year === '2025';
+              return [`${value} ${unit}${isEstimated ? estimatedSuffix : ''}`, name];
+            }}
+          />
           <Legend />
           <Bar
             dataKey="employees"

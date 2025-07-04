@@ -141,14 +141,15 @@
   "pg004_view_details": "View Details",
   "pg004_hide_details": "Hide Details",
   "pg004_chart_tabs": {
-    "revenue": "Revenue Trend (Next 3 Years)",
+    "revenue": "Revenue Trend (3 Years)",
     "workforce": "Employee & Contractor Composition"
   },
-  "pg004_chart_revenue_title": "Revenue Trend (Next 3 Years)",
+  "pg004_chart_revenue_title": "Revenue Trend (3 Years)",
   "pg004_chart_workforce_title": "Employee & Contractor Composition",
   "pg004_chart_axis_revenue_unit": "B JPY",
-  "pg004_chart_axis_workforce_unit": "people",
+  "pg004_chart_axis_workforce_unit": "pers.",
   "pg004_chart_legend_employees": "Employees",
   "pg004_chart_legend_contractors": "Contractors",
-  "pg004_chart_section_title_suffix": " Business Overview"
+  "pg004_chart_section_title_suffix": " Business Overview",
+  "pg004_chart_estimated_suffix": "(estimated)"
 }

@@ -121,7 +121,7 @@
   "pg004_clients_title": "主要取引先一覧",
   "pg004_clients_alt": "主要な取引企業一覧図",
   "geo-map-section": "グローバルな視点",
-  "pg004_3year_plan_title": "今後3年間の運営計画",
+  "pg004_3year_plan_title": "最近3年間の運営実績",
   "pg004_3year_plan_details": [
     [
       "IT事業：業務SEサービス提供（金融、クレジット等）",
@@ -141,14 +141,15 @@
   "pg004_view_details": "詳細を見る",
   "pg004_hide_details": "詳細を隠す",
   "pg004_chart_tabs": {
-    "revenue": "売上推移（今後3年間）",
+    "revenue": "売上推移（3年間）",
     "workforce": "社員・委託先構成の推移"
   },
-  "pg004_chart_revenue_title": "売上推移（今後3年間）",
+  "pg004_chart_revenue_title": "売上推移（3年間）",
   "pg004_chart_workforce_title": "社員・委託先構成の推移",
   "pg004_chart_axis_revenue_unit": "億円",
   "pg004_chart_axis_workforce_unit": "名",
   "pg004_chart_legend_employees": "社員",
   "pg004_chart_legend_contractors": "委託先",
-  "pg004_chart_section_title_suffix": "の事業内容"
+  "pg004_chart_section_title_suffix": "の事業内容",
+  "pg004_chart_estimated_suffix": "（推定）"
 }

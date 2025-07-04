@@ -121,7 +121,7 @@
   "pg004_clients_title": "主要客户一览",
   "pg004_clients_alt": "主要合作企业一览图",
   "geo-map-section": "全球视野",
-  "pg004_3year_plan_title": "未来三年运营规划",
+  "pg004_3year_plan_title": "最近三年运营实绩",
   "pg004_3year_plan_details": [
     [
       "IT事业：提供SE业务服务（金融、信用卡等）",
@@ -141,14 +141,15 @@
   "pg004_view_details": "查看详情",
   "pg004_hide_details": "隐藏详情",
   "pg004_chart_tabs": {
-    "revenue": "销售额推移（未来三年）",
+    "revenue": "销售额推移（三年）",
     "workforce": "员工与外包人员构成推移"
   },
-  "pg004_chart_revenue_title": "销售额推移（未来三年）",
+  "pg004_chart_revenue_title": "销售额推移（三年）",
   "pg004_chart_workforce_title": "员工与外包人员构成推移",
   "pg004_chart_axis_revenue_unit": "亿元",
   "pg004_chart_axis_workforce_unit": "人",
   "pg004_chart_legend_employees": "员工",
   "pg004_chart_legend_contractors": "外包人员",
-  "pg004_chart_section_title_suffix": " 业务概览"
+  "pg004_chart_section_title_suffix": " 业务概览",
+  "pg004_chart_estimated_suffix": "（预估）"
 }
