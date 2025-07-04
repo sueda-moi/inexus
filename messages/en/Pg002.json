@@ -1,21 +1,25 @@
 {
-  "pg002_title": "＜Areas of Expertise＞",
+  "pg002_title": "<Areas of Expertise>",
   "pg002_summary_items": [
-    "Finance Domain",
-    "・Core banking systems: deposit operations, remittance processing, interbank relay, etc.",
-    "(Mainly NTT Data joint systems for regional banks, JASTEM, MEJAR, etc.)",
-    "・Peripheral systems: joint batch operations, transaction history, AWS infrastructure development and maintenance",
-    "Insurance Domain",
-    "・Development and maintenance of life and non-life insurance systems (network-related)",
-    "(Major clients include Tokio Marine, Prudential Life, JHF, MUFG Bank, and Daiwa Institute of Research)",
-    "Social Infrastructure Domain",
-    "・Web system development, credit card systems, large-scale Ethernet development",
-    "(Mainly for Riken Vitamin, INET, NSS, etc.)",
-    "＜Our Strengths＞",
-    "We have a large number of SEs with deep expertise in financial systems, including core and peripheral systems, and insurance",
-    "We also have many SEs with experience in building infrastructure like AWS and networks",
-    "According to client needs:",
-    "・We can offer personnel proposals in collaboration with our Japanese SE subsidiary",
-    "・We support development and maintenance outside the Tokyo metropolitan area, including Hokkaido (Sapporo) and Nagoya"
+    { "type": "title", "text": "Financial Sector" },
+    { "type": "item", "text": "Core banking systems for deposits / remittance / interbank relay services" },
+    { "type": "item", "text": "(Mainly NTT Data Regional Bank Shared System, JASTEM, MEJAR, etc.)" },
+    { "type": "item", "text": "Peripheral systems for batch processing / transaction history / AWS infrastructure setup and maintenance" },
+
+    { "type": "title", "text": "Insurance Sector" },
+    { "type": "item", "text": "Development and maintenance of life and non-life insurance systems (NW)" },
+    { "type": "item", "text": "(Main clients include Tokio Marine, Prudential Life, Housing Finance Agency, MUFG Bank, Daiwa Institute of Research)" },
+
+    { "type": "title", "text": "Social Infrastructure Sector" },
+    { "type": "item", "text": "Web system development / credit card systems / large-scale Ethernet development" },
+    { "type": "item", "text": "(Main clients include Riken Vitamin, iNet, NSS, etc.)" },
+
+    { "type": "title", "text": "<Our Strengths>" },
+    { "type": "item", "text": "Many skilled engineers with expertise in core banking, peripheral systems, and insurance domains" },
+    { "type": "item", "text": "Many engineers well-versed in network infrastructure, including AWS and other social infrastructure systems" },
+
+    { "type": "title", "text": "Based on client needs" },
+    { "type": "item", "text": "Personnel proposals in collaboration with our Japanese SE subsidiary teams" },
+    { "type": "item", "text": "Development and maintenance available outside Tokyo, including Hokkaido (Sapporo) and regions other than Nagoya" }
   ]
 }

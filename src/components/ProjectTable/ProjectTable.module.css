@@ -1,0 +1,80 @@
+.tableBlock {
+  margin-bottom: 2.5rem;
+  background-color: #f9fbfd; /* Light background for better contrast */
+  border-radius: 16px; /* Softer, modern rounded corners */
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08); /* Subtle elevation for depth */
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border: 1px solid #e2e8f0; /* Defines the edge of the component */
+}
+
+.tableHeaderButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: none;
+  background: #eaf2fb; /* Light bluish-gray background for the header */
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.tableHeaderButton:hover {
+  background: #dbe9f9; /* Slightly darker on hover for interactivity */
+}
+
+.tableTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0f172a; /* Dark navy for high legibility */
+  margin: 0;
+  text-align: left;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #2563eb; /* Business-like blue tone */
+  margin-left: 1rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.875rem 1.5rem 1.5rem 1.75rem;
+  background-color: #ffffff; /* Clear separation from wrapper */
+  
+}
+
+.table th,
+.table td {
+  border-bottom: 1px solid #e2e8f0; /* Soft lines between rows */
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.table th {
+  background-color: #f3f6fa; /* Gentle header background */
+  font-weight: 600;
+  color: #1e293b; /* Consistent heading text color */
+}
+
+.table tr:hover td {
+  background-color: #f1f5f9; /* Light hover effect for clarity */
+}
+
+@media (max-width: 768px) {
+  .table {
+    display: block;
+    overflow-x: auto; /* Enable horizontal scroll on small screens */
+  }
+
+  .tableHeaderButton {
+    padding: 1rem;
+  }
+
+  .tableTitle {
+    font-size: 1.15rem; /* Adjust for mobile readability */
+  }
+}

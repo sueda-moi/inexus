@@ -1,60 +1,154 @@
 {
   "pg004_header_alt": "事業構造図",
-  "pg004_services_title": "サービス体系",
+  "pg004_services_title": "主要事業領域",
   "pg004_services": [
     {
-      "title": "社会インフラ事業",
-      "desc": "行政、交通、医療など、社会基盤を支えるシステムの構築・運用を通じて、安心・安全な社会の実現を支援します。",
-      "fields": ["コンサルティング事業", "インフラ構築・開発"]
+      "title": "IT事業",
+      "desc": "金融・保険・社会基盤を中心とした幅広い分野に対応し、業務アプリケーションから基盤構築、クラウド、ネットワーク運用まで総合的に提供します。",
+      "fields": [
+        "金融ビジネス事業（勘定系業務、周辺系業務）",
+        "保険ビジネス事業（生保、損保、小口保険等々）",
+        "社会基盤ビジネス（AWS、サーバ構築、ネットワーク）",
+        "【業界】金融・銀行、保険、証券、クレジット関連／組み込み系：車載系、通信機器／ERP・SAP",
+        "【システム形態】オープン系、メインフレーム、Android、iOS",
+        "【開発技術】Java、C、Python、Cobol、ABAP、SQL Server、Oracle、Windows、Unix、汎用機、AWS（Azure）"
+      ]
     },
     {
-      "title": "次の柱となる事業群",
-      "desc": "AI・IoT・クラウド技術を活用した新規事業を積極的に展開し、次世代の成長エンジンを育成しています。",
-      "fields": ["IT事業"]
+      "title": "不動産事業",
+      "desc": "IT事業を主力としながらも、不動産分野の成長も視野に入れ、売買・建築・賃貸など幅広く展開しています。",
+      "fields": [
+        "土地／マンション売買",
+        "建築／分譲",
+        "店舗等投資物件賃貸"
+      ]
     },
     {
-      "title": "ソリューション開発",
-      "desc": "顧客の課題に応じて、システム開発・運用保守・セキュリティ対応まで一気通貫で提供し、ビジネス変革を支援します。",
-      "fields": ["IT事業", "不動産事業"]
-    }
-  ],
-  "pg004_business_fields_title": "主要事業領域",
-  "pg004_business_fields": [
-    {
-      "category": "IT事業",
-      "items": [
+      "title": "主要開発実績",
+      "desc": "以下は当社が過去に取り組んできた主要な分野です。",
+      "fields": [
         "業務アプリケーション開発：金融（銀行・クレジットカード・証券）、保険、生保損保基幹システム開発",
         "公共DX：自治体向け公共システム・生成AI活用の自治体DX支援",
         "組込系：車載Audio、自動運転制御・検証",
-        "通信：通信機器関連開発・検証"
-      ]
-    },
-    {
-      "category": "インフラ構築・開発",
-      "items": [
+        "通信：通信機器関連開発・検証",
         "クラウド環境を利用したインフラ構築・開発（AWS / Azure）",
-        "オンプレミス型基盤構築・運用保守"
-      ]
-    },
-    {
-      "category": "コンサルティング事業",
-      "items": [
+        "オンプレミス型基盤構築・運用保守",
         "SmartCity関連",
         "交通、食品安全、教育Cloudサービス",
         "電子マネー・モバイル決済・インターネット決済",
         "日経企業中国現地ビジネスのサポート"
       ]
+    }
+  ],
+  "pg004_fields_labels": {
+    "project_name": "案件名",
+    "role": "担当",
+    "phase": "工程",
+    "tech_stack": "開発技術・環境"
+  },
+  "pg004_business_fields_title": "主要事業実績",
+  "pg004_business_fields": [
+    {
+      "category": "金融系システム",
+      "projects": [
+        {
+          "title": "インターネットバンキング基盤構築",
+          "responsibility": "AWS環境構築（EC2, S3, EBS, VPC）",
+          "phase": "要件定義～リリース・保守",
+          "technology": "AWS CLI、Shell、JP1"
+        },
+        {
+          "title": "地銀共同センター：預金・為替・融資業務",
+          "responsibility": "詳細設計～結合・総合テスト、保守対応",
+          "phase": "開発～保守",
+          "technology": "COBOL、JCL、TSO、DB2、CICS"
+        },
+        {
+          "title": "金融業務の勘定系／周辺系システム開発",
+          "responsibility": "要件分析、設計、開発、試験、導入",
+          "phase": "上流～下流一貫対応",
+          "technology": "Java、Spring、Oracle、Unix"
+        }
+      ]
     },
     {
-      "category": "不動産事業",
-      "items": [
-        "土地／マンション売買",
-        "建築／分譲",
-        "店舗など投資物件賃貸"
+      "category": "保険系システム",
+      "projects": [
+        {
+          "title": "生命保険：新契約システム刷新",
+          "responsibility": "設計、開発、試験、移行支援",
+          "phase": "基本設計～保守",
+          "technology": "Java、Spring、MyBatis、PostgreSQL"
+        },
+        {
+          "title": "損害保険：契約管理・支援システム",
+          "responsibility": "業務設計、システム保守",
+          "phase": "設計～保守",
+          "technology": "C#、.NET、Oracle"
+        },
+        {
+          "title": "保険契約管理および請求処理",
+          "responsibility": "開発、試験、運用サポート",
+          "phase": "実装～リリース",
+          "technology": "VB.NET、SQL Server、Windows Server"
+        }
+      ]
+    },
+    {
+      "category": "社会基盤系システム",
+      "projects": [
+        {
+          "title": "自治体DX：スマートシティWebポータル",
+          "responsibility": "フロントエンド／バックエンド開発、AIチャットボット連携",
+          "phase": "アジャイル開発",
+          "technology": "Vue.js、Node.js、Python、AWS"
+        },
+        {
+          "title": "公共交通：チケッティングプラットフォーム",
+          "responsibility": "システム設計、決済ゲートウェイ連携",
+          "phase": "要件定義～納品",
+          "technology": "Java、Spring Boot、PostgreSQL、Docker"
+        },
+        {
+          "title": "医療：クラウド型管理システム",
+          "responsibility": "クラウドインフラ構築、フルスタック実装",
+          "phase": "設計～運用",
+          "technology": "React、NestJS、GCP、Kubernetes"
+        }
       ]
     }
   ],
   "pg004_clients_title": "主要取引先一覧",
   "pg004_clients_alt": "主要な取引企業一覧図",
-  "geo-map-section": "グローバルな視点"
+  "geo-map-section": "グローバルな視点",
+  "pg004_3year_plan_title": "今後3年間の運営計画",
+  "pg004_3year_plan_details": [
+    [
+      "IT事業：業務SEサービス提供（金融、クレジット等）",
+      "不動産事業：Smart City関連、不動産建設、売買、投資物件賃貸"
+    ],
+    [
+      "IT事業：業務SEサービス（金融、クレジット、産業、AWS等）",
+      "不動産事業：Smart City関連、不動産建設、売買、投資物件賃貸",
+      "その他：飲食関連事業"
+    ],
+    [
+      "IT事業：業務SEサービス（金融、クレジット、産業、AWS等）",
+      "不動産事業：Smart City関連、不動産建設、売買、投資物件賃貸",
+      "その他：飲食関連事業"
+    ]
+  ],
+  "pg004_view_details": "詳細を見る",
+  "pg004_hide_details": "詳細を隠す",
+  "pg004_chart_tabs": {
+    "revenue": "売上推移（今後3年間）",
+    "workforce": "社員・委託先構成の推移"
+  },
+  "pg004_chart_revenue_title": "売上推移（今後3年間）",
+  "pg004_chart_workforce_title": "社員・委託先構成の推移",
+  "pg004_chart_axis_revenue_unit": "億円",
+  "pg004_chart_axis_workforce_unit": "名",
+  "pg004_chart_legend_employees": "社員",
+  "pg004_chart_legend_contractors": "委託先",
+  "pg004_chart_section_title_suffix": "の事業内容"
 }

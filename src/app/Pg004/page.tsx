@@ -5,23 +5,24 @@ import './Pg004.css';
 import React, { useEffect, useState } from 'react';
 import { useMessage } from '@/lib/useMessage';
 import CustomGeoMap from '@/components/CustomGeoMap/CustomGeoMap';
+import { BusinessField, ProjectLabels } from '@/types/Pg004';
+import ProjectTable from '@/components/ProjectTable/ProjectTable';
+import ServiceSection from '@/components/ServiceCard/ServiceSection';
+import { threeYearPlanData } from '@/data/threeYearPlan';
+import ChartTabs from '@/components/ChartTabs/ChartTabs';
 
-type BusinessField = {
-  category: string;
-  items: string[];
-};
 
-type Service = {
-  title: string;
-  desc: string;
-  fields?: string[]; // Optional: link to related BusinessField.category
-};
+
 
 const Pg004: React.FC = () => {
   const getMessage = useMessage();
 
-  const services = getMessage('Pg004', 'pg004_services') as unknown as Service[];
+
   const fields = getMessage('Pg004', 'pg004_business_fields') as unknown as BusinessField[];
+  const projectLabels = getMessage('Pg004', 'pg004_fields_labels') as unknown as ProjectLabels;
+  const planDetails = getMessage('Pg004', 'pg004_3year_plan_details') as unknown as string[][];
+
+
 
   const [showTop, setShowTop] = useState(false);
   const [showDown, setShowDown] = useState(false);
@@ -96,33 +97,50 @@ const Pg004: React.FC = () => {
 
 
         {/* Tab Content */}
-        {activeTab === 'services' && (
-          <div className="pg004-card-grid">
-            {Array.isArray(services) &&
-              services.map((service, index) => (
-                <div className="pg004-card" key={index}>
-                  <h3>{service.title}</h3>
-                  <p>{service.desc}</p>
-                </div>
-              ))}
-          </div>
-        )}
+        {activeTab === 'services' && <ServiceSection />}
 
         {activeTab === 'fields' && (
           <div className="pg004-business-field-wrapper">
             {fields.map((field, index) => (
-              <div key={index} className="pg004-business-field-block">
-                <h3 className="pg004-business-field-title">{field.category}</h3>
-                <ul className="pg004-business-field-list">
-                  {field.items.map((item, idx) => (
-                    <li key={idx}>{item}</li>
-                  ))}
-                </ul>
-              </div>
+              <ProjectTable
+                key={index}
+                category={field.category}
+                projects={field.projects}
+                labels={projectLabels}
+              />
             ))}
           </div>
         )}
+
+
       </section>
+
+
+      {/* 📅 Future Business Plan Section */}
+      <section className="pg004-section">
+        <h2 className="pg004-section-title">
+          {getMessage('Pg004', 'pg004_3year_plan_title')}
+        </h2>
+
+        <ChartTabs />
+
+        <div className="plan-details-wrapper">
+          {planDetails.map((yearDetails, idx) => (
+            <div key={idx} className="plan-card">
+              <h4 className="plan-title">
+                {threeYearPlanData[idx]?.year}の事業内容
+              </h4>
+              <ul className="plan-list">
+                {yearDetails.map((line, i) => (
+                  <li key={i}>{line}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+      </section>
+
 
       {/* 🧑‍💼 Major Clients Section */}
       <section className="pg004-section">

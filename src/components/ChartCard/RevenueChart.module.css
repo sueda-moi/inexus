@@ -1,0 +1,21 @@
+.chart-container {
+  width: 100%;
+  height: 20rem; /* 相当于 Tailwind 的 h-80 */
+}
+
+.chart-wrapper {
+  width: 100%;
+  max-width: 64rem; /* Tailwind 的 max-w-4xl */
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+}
+
+.chart-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+}

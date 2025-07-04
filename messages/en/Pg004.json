@@ -1,60 +1,154 @@
 {
   "pg004_header_alt": "Business Structure Diagram",
-  "pg004_services_title": "Service Categories",
+  "pg004_services_title": "Key Business Domains",
   "pg004_services": [
     {
-      "title": "Social Infrastructure",
-      "desc": "We support the realization of a safe and secure society through the construction and operation of systems that underpin society, such as government, transportation, and healthcare.",
-      "fields": ["Consulting Business", "Infrastructure Development"]
-    },
-    {
-      "title": "Next-Generation Growth",
-      "desc": "We actively promote new businesses utilizing AI, IoT, and cloud technologies to cultivate future growth engines.",
-      "fields": ["IT Business"]
-    },
-    {
-      "title": "Solution Development",
-      "desc": "We provide end-to-end services from system development, maintenance, to security solutions tailored to client needs, driving business transformation.",
-      "fields": ["IT Business", "Real Estate Business"]
-    }
-  ],
-  "pg004_business_fields_title": "Main Business Fields",
-  "pg004_business_fields": [
-    {
-      "category": "IT Business",
-      "items": [
-        "Business application development: Core systems for banking, credit cards, securities, insurance",
-        "Public DX: Systems and Gen-AI-based DX support for municipalities",
-        "Embedded Systems: In-car audio, autonomous driving control and testing",
-        "Telecom: Device development and testing"
+      "title": "IT Business",
+      "desc": "We provide comprehensive IT solutions across a wide range of fields centered on finance, insurance, and social infrastructure — from business applications to infrastructure setup, cloud, and network operations.",
+      "fields": [
+        "Finance Business (Core systems, peripheral systems)",
+        "Insurance Business (Life, non-life, micro insurance, etc.)",
+        "Social Infrastructure Business (AWS, server setup, networking)",
+        "[Industries] Finance, banking, insurance, securities, credit / Embedded: automotive, communication devices / ERP・SAP",
+        "[System Types] Open systems, mainframes, Android, iOS",
+        "[Development Technologies] Java, C, Python, Cobol, ABAP, SQL Server, Oracle, Windows, Unix, mainframe, AWS (Azure)"
       ]
     },
     {
-      "category": "Infrastructure Development",
-      "items": [
-        "Cloud-based infrastructure development (AWS / Azure)",
-        "On-premise infrastructure construction and maintenance"
-      ]
-    },
-    {
-      "category": "Consulting Business",
-      "items": [
-        "Smart City initiatives",
-        "Cloud services for transport, food safety, education",
-        "E-money, mobile and online payment solutions",
-        "Support for Japanese companies operating in China"
-      ]
-    },
-    {
-      "category": "Real Estate Business",
-      "items": [
-        "Land and apartment sales",
-        "Construction and housing sales",
+      "title": "Real Estate Business",
+      "desc": "While IT remains our core business, we are also expanding into the real estate sector, actively engaging in property sales, construction, and leasing.",
+      "fields": [
+        "Land / apartment sales",
+        "Construction / housing development",
         "Rental of investment properties such as shops"
       ]
+    },
+    {
+      "title": "Major Development Achievements",
+      "desc": "Below are some of the major areas we have worked on in the past.",
+      "fields": [
+        "Business application development: finance (banking, credit card, securities), insurance, core system development for life and non-life insurance",
+        "Public DX: Public systems for municipalities, support for municipal DX using generative AI",
+        "Embedded: Automotive audio, autonomous driving control and verification",
+        "Telecommunications: Development and testing of communication devices",
+        "Infrastructure development using cloud environments (AWS / Azure)",
+        "On-premise infrastructure setup and maintenance",
+        "Smart City-related projects",
+        "Cloud services for transportation, food safety, and education",
+        "E-money, mobile payments, internet payments",
+        "Support for Japanese companies' local business in China"
+      ]
     }
   ],
-  "pg004_clients_title": "Major Clients",
-  "pg004_clients_alt": "Diagram of Major Client Companies",
-  "geo-map-section": "Global Presence"
+  "pg004_fields_labels": {
+    "project_name": "Project Name",
+    "role": "Responsibility",
+    "phase": "Phase",
+    "tech_stack": "Development Tech / Environment"
+  },
+  "pg004_business_fields_title": "Major Project Achievements",
+  "pg004_business_fields": [
+    {
+      "category": "Financial Systems",
+      "projects": [
+        {
+          "title": "Internet Banking Infrastructure Construction",
+          "responsibility": "AWS environment setup (EC2, S3, EBS, VPC)",
+          "phase": "Requirement definition to release & maintenance",
+          "technology": "AWS CLI, Shell, JP1"
+        },
+        {
+          "title": "Regional Bank Joint Center: Deposit, remittance, and loan operations",
+          "responsibility": "Detailed design to integration & system testing, maintenance",
+          "phase": "Development to maintenance",
+          "technology": "COBOL, JCL, TSO, DB2, CICS"
+        },
+        {
+          "title": "Financial Systems: Core and peripheral development",
+          "responsibility": "Requirement analysis, design, development, testing, deployment",
+          "phase": "End-to-end (upstream to downstream)",
+          "technology": "Java, Spring, Oracle, Unix"
+        }
+      ]
+    },
+    {
+      "category": "Insurance Systems",
+      "projects": [
+        {
+          "title": "Life Insurance: New contract system renewal",
+          "responsibility": "Design, development, testing, migration support",
+          "phase": "Basic design to maintenance",
+          "technology": "Java, Spring, MyBatis, PostgreSQL"
+        },
+        {
+          "title": "Non-life Insurance: Contract management and support system",
+          "responsibility": "Business design, system maintenance",
+          "phase": "Design to maintenance",
+          "technology": "C#, .NET, Oracle"
+        },
+        {
+          "title": "Insurance Contract Management and Claims Processing",
+          "responsibility": "Development, testing, operations support",
+          "phase": "Implementation to release",
+          "technology": "VB.NET, SQL Server, Windows Server"
+        }
+      ]
+    },
+    {
+      "category": "Social Infrastructure Systems",
+      "projects": [
+        {
+          "title": "Municipal DX: Smart City Web Portal",
+          "responsibility": "Frontend/backend development, AI chatbot integration",
+          "phase": "Agile development",
+          "technology": "Vue.js, Node.js, Python, AWS"
+        },
+        {
+          "title": "Public Transportation: Ticketing Platform",
+          "responsibility": "System design, payment gateway integration",
+          "phase": "Requirement definition to delivery",
+          "technology": "Java, Spring Boot, PostgreSQL, Docker"
+        },
+        {
+          "title": "Medical: Cloud-based management system",
+          "responsibility": "Cloud infrastructure setup, full-stack development",
+          "phase": "Design to operations",
+          "technology": "React, NestJS, GCP, Kubernetes"
+        }
+      ]
+    }
+  ],
+  "pg004_clients_title": "Major Client List",
+  "pg004_clients_alt": "Diagram of Key Business Partners",
+  "geo-map-section": "Global Perspective",
+  "pg004_3year_plan_title": "Three-Year Business Plan",
+  "pg004_3year_plan_details": [
+    [
+      "IT Business: Providing SE services (Finance, Credit, etc.)",
+      "Real Estate Business: Smart City projects, construction, sales, and rental of investment properties"
+    ],
+    [
+      "IT Business: SE services (Finance, Credit, Industrial, AWS, etc.)",
+      "Real Estate Business: Smart City projects, construction, sales, and rental of investment properties",
+      "Others: Food and beverage business"
+    ],
+    [
+      "IT Business: SE services (Finance, Credit, Industrial, AWS, etc.)",
+      "Real Estate Business: Smart City projects, construction, sales, and rental of investment properties",
+      "Others: Food and beverage business"
+    ]
+  ],
+  "pg004_view_details": "View Details",
+  "pg004_hide_details": "Hide Details",
+  "pg004_chart_tabs": {
+    "revenue": "Revenue Trend (Next 3 Years)",
+    "workforce": "Employee & Contractor Composition"
+  },
+  "pg004_chart_revenue_title": "Revenue Trend (Next 3 Years)",
+  "pg004_chart_workforce_title": "Employee & Contractor Composition",
+  "pg004_chart_axis_revenue_unit": "B JPY",
+  "pg004_chart_axis_workforce_unit": "people",
+  "pg004_chart_legend_employees": "Employees",
+  "pg004_chart_legend_contractors": "Contractors",
+  "pg004_chart_section_title_suffix": " Business Overview"
 }

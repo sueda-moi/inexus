@@ -31,6 +31,7 @@
 
 .pg004-section {
   margin: 2rem 0;
+  padding: 1rem;
 }
 
 .pg004-image-wrapper {
@@ -314,4 +315,68 @@
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
   }
+}
+
+
+.pg004-3year-plan-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.pg004-3year-plan-card {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.pg004-3year-plan-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.pg004-3year-plan-card ul {
+  padding-left: 1.2rem;
+  list-style-type: disc;
+}
+
+.plan-details-wrapper {
+  width: 100%;
+  max-width: 960px;
+  margin: 3rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.plan-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.plan-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.plan-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #374151;
+  line-height: 1.6;
 }
