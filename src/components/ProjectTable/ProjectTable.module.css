@@ -4,7 +4,7 @@
   border-radius: 16px; /* Softer, modern rounded corners */
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08); /* Subtle elevation for depth */
   transition: all 0.3s ease;
-  overflow: hidden;
+  /* overflow: hidden; */
   border: 1px solid #e2e8f0; /* Defines the edge of the component */
 }
 
@@ -39,7 +39,7 @@
 }
 
 .table {
-  width: 100%;
+  /* width: 100%; */
   border-collapse: collapse;
   margin: 0.875rem 1.5rem 1.5rem 1.75rem;
   background-color: #ffffff; /* Clear separation from wrapper */

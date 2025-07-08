@@ -24,7 +24,7 @@ const ProjectTable: React.FC<Props> = ({ category, projects, labels }) => {
     //   console.log('⚠️ Received labels:', labels);
     //   console.log('⚠️ tech_stack label:', labels.tech_stack);
 
-    const [expanded, setExpanded] = useState(false);
+    const [expanded, setExpanded] = useState(true); // Default to expanded
 
     return (
         <div className={styles.tableBlock}>
