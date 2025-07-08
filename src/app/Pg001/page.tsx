@@ -92,8 +92,8 @@ const Pg001: React.FC = () => {
             <Image
               src="/image/pg001-intro.jpg"
               alt="Intro"
-              width={1020}
-              height={800}
+              width={500}
+              height={300}
               className="w-full h-full rounded-lg shadow-lg"
             />
           </div>

@@ -179,7 +179,7 @@
 .pg001-intro-image {
   flex: 2;
   position: relative;
-  max-width: 1020px;
+  max-width: 500px;
   aspect-ratio: 4 / 3;
   overflow: hidden;
   border-radius: 10px;

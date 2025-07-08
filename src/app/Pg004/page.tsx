@@ -8,8 +8,8 @@ import CustomGeoMap from '@/components/CustomGeoMap/CustomGeoMap';
 import { BusinessField, ProjectLabels } from '@/types/Pg004';
 import ProjectTable from '@/components/ProjectTable/ProjectTable';
 import ServiceSection from '@/components/ServiceCard/ServiceSection';
-import { threeYearPlanData } from '@/data/threeYearPlan';
-import ChartTabs from '@/components/ChartTabs/ChartTabs';
+// import { threeYearPlanData } from '@/data/threeYearPlan';
+// import ChartTabs from '@/components/ChartTabs/ChartTabs';
 
 
 
@@ -20,7 +20,7 @@ const Pg004: React.FC = () => {
 
   const fields = getMessage('Pg004', 'pg004_business_fields') as unknown as BusinessField[];
   const projectLabels = getMessage('Pg004', 'pg004_fields_labels') as unknown as ProjectLabels;
-  const planDetails = getMessage('Pg004', 'pg004_3year_plan_details') as unknown as string[][];
+  //const planDetails = getMessage('Pg004', 'pg004_3year_plan_details') as unknown as string[][];
 
 
 
@@ -117,7 +117,7 @@ const Pg004: React.FC = () => {
 
 
       {/* 📅 Future Business Plan Section */}
-      <section className="pg004-section">
+      {/* <section className="pg004-section">
         <h2 className="pg004-section-title">
           {getMessage('Pg004', 'pg004_3year_plan_title')}
         </h2>
@@ -139,7 +139,7 @@ const Pg004: React.FC = () => {
           ))}
         </div>
 
-      </section>
+      </section> */}
 
 
       {/* 🧑‍💼 Major Clients Section */}
