@@ -33,19 +33,19 @@
   "pg003_subsidiary_title": "Subsidiary (100% owned by Nexus Technology)",
   "pg003_parent_items": [
     "Company Name: Nexus Technology Co., Ltd.",
-    "Address: Sunrise Tachibana Bldg. 7F, 3-10-14 Higashi-Nihonbashi, Chuo-ku, Tokyo 103-0004",
+    "Address: Sunrise Tachibana Bldg. 7F, ",
+     "        3-10-14 Higashi-Nihonbashi, Chuo-ku, Tokyo 103-0004",
     "Capital: 30 million JPY",
     "Established: April 25, 2014",
-    "Representative: Jianping Xu",
-    "Employees: Approx. 150 people"
+    "Representative: Jianping Xu"
   ],
   "pg003_subsidiary_items": [
     "Company Name: Nexfo Co., Ltd.",
-    "Address: Sunrise Tachibana Bldg. 7F, 3-10-14 Higashi-Nihonbashi, Chuo-ku, Tokyo 103-0004",
+    "Address: Sunrise Tachibana Bldg. 7F, ",
+     "        3-10-14 Higashi-Nihonbashi, Chuo-ku, Tokyo 103-0004",
     "Capital: 9.9 million JPY",
     "Established: June 19, 2017",
-    "Representative: Kazushi Saito",
-    "Employees: Approx. 30 Japanese SEs"
+    "Representative: Kazushi Saito"
   ],
   "pg003_orgchart_title": "Organizational Chart (Interactive)",
   "pg003_orgchart_data": {
@@ -83,7 +83,7 @@
       {
         "title": "Group Company Strategy Office",
         "children": [
-          "Nexfa Co., Ltd."
+          "Nexfo Co., Ltd."
         ]
       }
     ]
