@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './ContactForm.css';
 import { useToast } from '@/lib/useToast';
 import { useMessage } from '@/lib/useMessage';
@@ -10,6 +10,15 @@ const ContactForm: React.FC = () => {
   const [formStatus, setFormStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const toast = useToast();
   const getMessage = useMessage();
+
+  useEffect(() => {
+    if (formStatus === 'success') {
+      const timer = setTimeout(() => {
+        setFormStatus('idle'); // 5秒后将状态重置为'idle'
+      }, 5000); // 5000毫秒 = 5秒
+      return () => clearTimeout(timer); // 组件卸载或状态改变时清除定时器
+    }
+  }, [formStatus]); // 依赖 formStatus，当它变为 'success' 时触发
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
