@@ -9,25 +9,71 @@ import Footer from '@/components/Footer';
 import LoadingScreen from '@/components/LoadingScreen/LoadingScreen';
 import { usePageTransition } from '@/hooks/usePageTransition';
 import { useLocaleStore } from '@/store/useLocaleStore';
+import { useScreenSizeStore } from '@/store/useScreenSizeStore'; // <-- 导入你的 Zustand store
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
-  // Check if the current page is the home screen (used to float the footer)
-  // const isHomeScreenPage = pathname === '/Pg001';
-
   const LOADING_DURATION = 400;
-
-  // Custom hook to control loading state during page transitions
   const { loading } = usePageTransition(LOADING_DURATION);
-
-  // Handle first-load animation
   const [isFirstLoadFinished, setIsFirstLoadFinished] = useState(false);
-
-  // Zustand: language initialization
   const setLocale = useLocaleStore((state) => state.setLocale);
 
-  // ✅ Always unlock scroll on route change (prevents stuck scroll after leaving Pg001)
+  // 从 store 中获取设置尺寸的方法
+  const setScreenWidth = useScreenSizeStore((state) => state.setWidth);
+  const setScreenHeight = useScreenSizeStore((state) => state.setHeight);
+
+  // === 处理 iframe 尺寸的代码 ===
+  useEffect(() => {
+    const handleMessageFromParent = (event: MessageEvent) => {
+      // **重要：验证发送方来源**
+      const allowedParentOrigin = 'http://www.inexus.co.jp/'; // <--- 替换为实际父页面域名和协议
+
+      if (event.origin !== allowedParentOrigin) {
+        console.warn('收到来自未经授权父源的消息:', event.origin);
+        return;
+      }
+
+      // 检查消息类型
+      if (event.data && event.data.type === 'updateScreenSize') {
+        if (typeof event.data.width === 'number') {
+          setScreenWidth(event.data.width); // 调用 store 中的方法更新宽度
+        }
+        if (typeof event.data.height === 'number') {
+          setScreenHeight(event.data.height); // 调用 store 中的方法更新高度
+        }
+        console.log('从父页面收到 iframe 宽度和高度:', event.data.width, event.data.height);
+      }
+    };
+
+    // 添加事件监听器
+    window.addEventListener('message', handleMessageFromParent);
+
+    // 初次加载时，尝试从 URL 参数获取宽度和高度（作为 fallback/初始值）
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialWidth = urlParams.get('width');
+    const initialHeight = urlParams.get('height');
+
+    if (initialWidth) {
+      const parsedWidth = parseInt(initialWidth, 10);
+      if (!isNaN(parsedWidth)) {
+        setScreenWidth(parsedWidth);
+      }
+    }
+    if (initialHeight) {
+      const parsedHeight = parseInt(initialHeight, 10);
+      if (!isNaN(parsedHeight)) {
+        setScreenHeight(parsedHeight);
+      }
+    }
+
+    // 组件卸载时移除事件监听器
+    return () => {
+      window.removeEventListener('message', handleMessageFromParent);
+    };
+  }, [setScreenWidth, setScreenHeight]); // 依赖项是 setState 函数，确保正确性
+
+  // === 其他 useEffect 钩子和逻辑保持不变 ===
   useEffect(() => {
     const unlockScroll = () => {
       document.documentElement.style.overflow = '';

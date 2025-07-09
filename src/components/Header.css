@@ -24,7 +24,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  float: left;
+  float: left; /* Consider using flexbox for layout instead of float for better responsiveness */
   padding-right: 2rem;
 }
 
@@ -68,7 +68,11 @@
   border: none;
   color: rgb(0, 0, 0);
   cursor: pointer;
+  /* Default state: hidden on desktop. Header.tsx will render it conditionally. */
+  /* This CSS is more for ensuring consistent styling when it IS rendered. */
+  /* display: none; */ /* We can remove this if Header.tsx fully controls display via conditional rendering */
 }
+
 
 .custom-header.scrolled {
   background-color: rgba(129, 139, 234, 0.696);
@@ -85,7 +89,42 @@
   color: white;
 }
 
-/* 移动端菜单浮层 */
+/* ---------------------------------------------------- */
+/* --- RESPONSIVE STYLES FOR IFRAME MOBILE MODE --- */
+/* --- These styles apply when html.is-mobile-iframe is present --- */
+/* ---------------------------------------------------- */
+
+/* Adjust inner padding for smaller screens in iframe */
+html.is-mobile-iframe .custom-header-inner {
+  padding: 0 1rem; /* Smaller horizontal padding */
+}
+
+/* Adjust logo group spacing for smaller screens */
+html.is-mobile-iframe .logo-group {
+    gap: 8px; /* Reduced gap between logo and company name */
+    padding-right: 1rem; /* Reduced padding on the right of the logo group */
+}
+
+/* Adjust company name font size for smaller screens */
+html.is-mobile-iframe .company-name {
+  font-size: 0.7rem; /* Smaller font size for company name */
+}
+
+/* Note: The 'nav-menu' and 'menu-toggle' visibility is now primarily handled
+   by conditional rendering in Header.tsx based on 'isMobileIframe'.
+   However, if you had other specific visual adjustments for the mobile versions
+   (e.g., smaller button size for menu-toggle, or specific margins), you would add them here.
+*/
+html.is-mobile-iframe .menu-toggle {
+    /* If you want the menu toggle icon to be smaller or have different styling on mobile */
+    /* For example: */
+    /* font-size: 1.5rem; */
+}
+
+
+/* 移动端菜单浮层 (mobile-menu-overlay and its children) */
+/* These styles are for the full-screen mobile menu. */
+/* No change needed here unless you want to further refine its look based on actual screen size */
 .mobile-menu-overlay {
   position: fixed;
   top: 0;
@@ -103,7 +142,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  padding-top: 4rem;
+  padding-top: 4rem; /* Adjust for header height */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -146,7 +185,3 @@
   display: flex;
   justify-content: center;
 }
-
-
-
-
