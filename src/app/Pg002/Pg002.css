@@ -3,7 +3,6 @@
   flex-direction: column;
 }
 
-
 .pg002-textbox {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   color: #474242;
@@ -33,34 +32,63 @@
   color: #2c3e50;
   line-height: 1.8;
   margin: 0 auto;
+  /* Add some overall padding to prevent content from touching the edges */
+  padding: 1.5rem; /* Increased padding for better internal spacing */
 }
 
+/* --- Section Titles (h3) --- */
 .section-title {
-font-size: 1.75rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: #2c3e50;
-  margin: 2rem 0 1.5rem;
+  margin: 2rem 0 1.5rem; /* Increased top margin for separation */
   padding-left: 0.75rem;
-  border-left: 5px solid #4299e1; 
+  border-left: 5px solid #4299e1;
   line-height: 1.4;
 }
 
+/* --- Description Paragraphs (p) --- */
+/* New style for 'des' type, which now uses a <p> tag with class .section-description */
+.section-description {
+  font-size: 1.05rem; /* Slightly larger or same as item, depending on preference */
+  line-height: 1.7;
+  color: #34495e; /* A slightly darker color for main descriptions */
+  margin-bottom: 1rem; /* Spacing below description */
+  padding-left: 0.75rem; /* Match section-title's padding if desired, or keep 0 */
+  /* No indentation for descriptions */
+}
+
+/* --- Unordered List Container (ul) --- */
+/* This is the <ul> that wraps the <li> items */
+.section-item-list {
+  list-style: none; /* Remove default list bullets (we'll add custom ones) */
+  margin: 0.5rem 0 1.5rem 0; /* Adjust top/bottom margin for lists, remove default left margin */
+  padding-left: 1.5rem; /* Main indentation for the entire list block */
+}
+
+/* --- List Items (li) --- */
+/* These are the actual <li> items for 'item' type */
 .section-item {
   font-size: 1rem;
-  margin-bottom: 0.8rem;
-  position: relative;
-  padding-left: 1.2em;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 0.5rem; /* Spacing between list items */
+  position: relative; /* For custom bullet positioning */
+  padding-left: 1.5em; /* Space for the custom bullet */
 }
 
 .section-item::before {
-  content: "•";
+  content: "•"; /* Custom bullet point */
   position: absolute;
-  left: 0;
-  color: #3498db;
+  left: 0; /* Position at the start of the padding-left */
+  color: #3498db; /* Blue color for bullets */
   font-weight: bold;
+  font-size: 1.1em; /* Slightly larger bullet */
+  top: 0; /* Align with the top of the text line */
 }
 
 
+/* --- Original styles for scroll buttons (keep these) --- */
 .scroll-lottie-wrapper {
   position: absolute;
   bottom: 30px;
@@ -76,10 +104,22 @@ font-size: 1.75rem;
   background-color: #f9fafb;
 }
 
+/* --- Media Queries (keep these and adjust if needed) --- */
 @media (max-width: 768px) {
   .pg002-title {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     padding-bottom: 0;
+  }
+  .section-title {
+    font-size: 1.25rem; /* Adjust title size for smaller screens */
+    margin: 1.5rem 0 1rem;
+  }
+  .section-description,
+  .section-item {
+    font-size: 0.95rem; /* Adjust text size for smaller screens */
+  }
+  .section-item-list {
+    padding-left: 1rem; /* Adjust list indentation for smaller screens */
   }
 }
