@@ -38,20 +38,15 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       if (event.data && event.data.type === 'updateScreenSize') {
         if (typeof event.data.width === 'number') {
           console.log('setScreenWidth之前event.data.width:', event.data.width);
-          alert('setScreenWidth之前event.data.width:'+ event.data.width);
           setScreenWidth(event.data.width); // 调用 store 中的方法更新宽度
           console.log('setScreenWidth之后event.data.width:', event.data.width);
-           alert('setScreenWidth之后event.data.width:'+ event.data.width);
         }
         if (typeof event.data.height === 'number') {
           console.log('setScreenWidth之前event.data.height:', event.data.height);
-          alert('setScreenWidth之前event.data.height:'+ event.data.height);
           setScreenHeight(event.data.height); // 调用 store 中的方法更新高度
           console.log('setScreenWidth之后event.data.height:', event.data.height);
-          alert('setScreenWidth之后event.data.height:'+ event.data.height);
         }
         console.log('从parent画面收到 iframe 宽度和高度:', event.data.width, event.data.height);
-        alert('从parent画面收到 iframe 宽度:'+ event.data.width + ' 和高度:'+ event.data.height);
       }
     };
 
@@ -67,20 +62,16 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       const parsedWidth = parseInt(initialWidth, 10);
       if (!isNaN(parsedWidth)) {
         console.log('setScreenWidth之前initialWidth:', initialWidth);
-        alert('setScreenWidth之前initialWidth:'+ initialWidth);
         setScreenWidth(parsedWidth);
         console.log('setScreenWidth之后initialWidth:', initialWidth);
-        alert('setScreenWidth之后initialWidth:'+ initialWidth);
       }
     }
     if (initialHeight) {
       const parsedHeight = parseInt(initialHeight, 10);
       if (!isNaN(parsedHeight)) {
         console.log('setScreenWidth之前initialHeight:', initialHeight);
-        alert('setScreenWidth之前initialHeight:'+ initialHeight);
         setScreenHeight(parsedHeight);
         console.log('setScreenWidth之后initialHeight:', initialHeight);
-        alert('setScreenWidth之后initialHeight:'+ initialHeight);
       }
     }
 

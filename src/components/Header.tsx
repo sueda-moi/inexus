@@ -8,7 +8,7 @@ import { FiAlignJustify, FiX } from 'react-icons/fi';
 import LanguageSwitcher from './LanguageSwitcher/LanguageSwitcher';
 import { useMessage } from '@/lib/useMessage';
 import './Header.css';
-import { useScreenSizeStore } from '@/store/useScreenSizeStore'; 
+import { useScreenSizeStore } from '@/store/useScreenSizeStore';
 
 interface HeaderProps {
   isMenuOpen: boolean;
@@ -19,21 +19,10 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
   const getMessage = useMessage(); // メッセージ取得関数を使用
 
   const [scrolled, setScrolled] = useState(false);
-  // const [isMobile, setIsMobile] = useState(false); // 移除或注释掉这个状态
   const pathname = usePathname();
 
   // 从 Zustand store 中获取 isMobileIframe 状态
   const isMobileIframe = useScreenSizeStore((state) => state.isMobileIframe);
-
-  // 之前的 isMobile 相关的 useEffect 钩子可以移除，因为现在直接使用 isMobileIframe
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setIsMobile(window.innerWidth < 860); // 这个逻辑将被 store 接管
-  //   };
-  //   handleResize();
-  //   window.addEventListener('resize', handleResize);
-  //   return () => window.removeEventListener('resize', handleResize);
-  // }, []);
 
   // 保持滚动检测
   useEffect(() => {
@@ -42,14 +31,18 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // 当 isMobileIframe 变化且菜单打开时，关闭菜单
+
   useEffect(() => {
-    // 假设当从手机模式切换到桌面模式时，如果菜单开着，应该关掉它
-    // 或者当 isMobileIframe 发生变化时，统一管理菜单状态
-    if (!isMobileIframe && isMenuOpen) { // 从手机模式切换到非手机模式时，如果菜单打开则关闭
-        toggleMenu(); // 调用父组件传入的关闭菜单函数
+    if (!isMobileIframe && isMenuOpen) { 
+      toggleMenu();
     }
-  }, [isMobileIframe, isMenuOpen, toggleMenu]); // 依赖项包含 isMobileIframe
+  }, [isMobileIframe, isMenuOpen, toggleMenu]);
+
+  useEffect(() => {
+    if (isMobileIframe && isMenuOpen) {
+      toggleMenu();
+    }
+  }, [pathname, isMobileIframe, isMenuOpen, toggleMenu]); 
 
 
   const navItems = [
@@ -67,7 +60,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
         <div className="custom-header-inner">
           <div className="logo-group">
             <Image src="/image/headerImg.png" alt="Logo" width={40} height={40} />
-            {/* 使用 isMobileIframe 来条件渲染 */}
+            {/* 使用 isMobileIframe 来条件渲染公司名称 */}
             {!isMobileIframe && (
               <p className="company-name">
                 <span>ネクサステクノロジー株式会社</span>
@@ -76,7 +69,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
             )}
           </div>
 
-          {/* 使用 isMobileIframe 来条件渲染 */}
+          {/* 桌面端导航菜单，使用 isMobileIframe 来条件渲染 */}
           {!isMobileIframe && (
             <nav className="nav-menu">
               {navItems.map((item) =>
@@ -94,8 +87,9 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
           )}
 
           <div className="header-right">
-            {/* 使用 isMobileIframe 来条件渲染 */}
+            {/* 桌面端语言切换器 */}
             {!isMobileIframe && <LanguageSwitcher scrolled={scrolled} />}
+            {/* 手机端菜单切换按钮 */}
             {isMobileIframe && (
               <button className="menu-toggle" onClick={toggleMenu}>
                 {isMenuOpen ? <FiX size={28} /> : <FiAlignJustify size={28} />}
@@ -105,7 +99,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
         </div>
       </header>
 
-      {/* 移动端全屏菜单浮层 - 同样使用 isMobileIframe */}
+      {/* 移动端全屏菜单浮层 - 仅在手机模式且菜单打开时显示 */}
       {isMobileIframe && isMenuOpen && (
         <div className="mobile-menu-overlay">
           <div className="mobile-menu-content">
