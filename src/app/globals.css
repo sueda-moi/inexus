@@ -83,6 +83,7 @@ body {
   background-color: #0c5dc0;
 }
 
+/* 现有规则保持不变，因为它处理的是浏览器原生宽度 */
 @media screen and (max-width: 600px) {
   .top-btn {
     right: 1rem;
@@ -90,8 +91,27 @@ body {
     padding: 0.4rem 0.6rem;
     font-size: 1.2rem;
   }
-  
 }
+
+/* === 新增：为 iframe 内部的手机模式添加样式 === */
+/* 假设你的移动断点是 768px (与 useScreenSizeStore 保持一致) */
+/* 如果 top-btn 在 600px 之外也需要针对 iframe 进行调整，在这里添加 */
+html.is-mobile-iframe .top-btn {
+  /* 例如，如果 top-btn 在 iframe 手机模式下总是需要小尺寸，不依赖 600px 断点 */
+  right: 1rem;
+  bottom: 1rem;
+  padding: 0.4rem 0.6rem;
+  font-size: 1.2rem;
+  /* 确保这个样式在 is-mobile-iframe 存在时生效，覆盖默认 */
+}
+/* 如果你希望当 iframe 处于桌面模式时，样式回到默认，或者有特别的 is-desktop-iframe 样式 */
+html.is-desktop-iframe .top-btn {
+  /* 例如，确保它回到 3rem 大小 */
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.25rem;
+}
+
 
 .scroll-down-btn {
   position: fixed;
@@ -127,3 +147,11 @@ body {
   }
 }
 
+/* === 新增：为 iframe 内部的手机模式添加样式 === */
+html.is-mobile-iframe .scroll-down-btn {
+  /* 举例：在手机模式下，可能需要缩小一些，或者调整位置 */
+  bottom: 1.5rem; /* 离底部更近 */
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.2rem;
+}
