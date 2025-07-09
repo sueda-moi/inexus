@@ -33,8 +33,13 @@ export interface ThreeYearPlanItem {
   details: string[];
 }
 
-export type Service = {
+export interface Service {
   title: string;
   desc: string;
-  fields?: string[];
-};
+  fields?: Pg004ServiceField[]; // Always an array of FieldItem like objects
+}
+
+export interface Pg004ServiceField {
+  type: 'subheader' | 'item'; // Renamed 'title' to 'subheader' for clarity
+  text: string;
+}

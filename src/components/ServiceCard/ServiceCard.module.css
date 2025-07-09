@@ -1,5 +1,6 @@
+/* --- Card Container Styles (keep as is) --- */
 .card {
-border: 1px solid #e5e7eb;
+  border: 1px solid #e5e7eb;
   padding: 2rem;
   border-radius: 1rem;
   background-color: #ffffff;
@@ -15,6 +16,7 @@ border: 1px solid #e5e7eb;
   transform: translateY(-2px);
 }
 
+/* --- Card Title and Description (keep as is) --- */
 .title {
   font-size: 1.25rem;
   color: #1e293b;
@@ -29,24 +31,103 @@ border: 1px solid #e5e7eb;
   margin-bottom: 1rem;
 }
 
-.list {
-  padding-left: 1.25rem;
-  margin: 0;
-  list-style-type: disc;
-  color: #334155;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-/* Optional: details/summary for collapsible */
+/* --- Details/Summary for collapsible (keep as is) --- */
 .details {
   margin-top: 1rem;
+  font-size: 0.95rem; /* This font size for details itself might not be needed */
+  color: #334155; /* This color for details itself might not be needed */
+  border-top: 1px solid #e5e7eb; /* light gray border */
+  padding-top: 1rem;
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
   font-size: 0.95rem;
-  color: #334155;
+  cursor: pointer;
+  color: #2563eb; /* blue-600 */
+  transition: color 0.2s ease;
+  /* Original Summary styles (retained/merged from  provided CSS) */
+  background-color: transparent;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  user-select: none;
+  outline: none;
+  /* Remove gap: 0.5rem; from previous summary definitions if it conflicts */
+}
+
+.summary:hover {
+  color: #1e40af; /* blue-800 */
+  background-color: #eff6ff; /* Added from  earlier summary definitions */
+}
+
+.details[open] .summary {
+  color: #1e40af; /* blue-800 */
+  font-weight: 600; /* Also from earlier definitions */
+}
+
+.icon {
+  margin-left: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.detailContent {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* Gap between direct children within detailContent */
+  font-size: 0.9rem; /* Base font size for content within details */
+  line-height: 1.6;
+  color: #374151; /* gray-700 */
+}
+
+/* --- NEW / MODIFIED STYLES FOR THE FIELDS CONTENT --- */
+
+/* 1. Subheader inside fields (h4 tag) */
+.fieldSubheader { /* Corresponds to the new h4 tag for type 'subheader' */
+  font-size: 1.05rem; /* Slightly larger than item text */
+  font-weight: 700; /* Bold for distinction */
+  color: #1e293b; /* Darker color for emphasis */
+  margin-top: 1.5rem; /* Spacing above subheader */
+  margin-bottom: 0.75rem; /* Spacing below subheader */
+  padding-left: 0.5rem; /* Slight indentation to visually separate from main desc */
+  border-left: 3px solid #6366f1; /* A subtle accent border (e.g., indigo-500) */
+}
+
+/* 2. List container for items (ul tag) */
+/* This replaces  old .list class for consistency with new structure */
+.itemList { /* Corresponds to the ul tag */
+  list-style: none; /* Remove default bullets, we'll use custom ones */
+  margin: 0; /* Reset default ul margin */
+  padding-left: 1.5rem; /* Indent the entire list of items */
+  line-height: 1.6; /* Line height for readability */
+}
+
+/* 3. Individual list items (li tag) */
+.fieldItem { /* Corresponds to the li tag for type 'item' */
+  font-size: 0.95rem; /*  desired font size for list items */
+  color: #334155; /* Default text color for items */
+  margin-bottom: 0.4rem; /* Spacing between list items */
+  position: relative; /* Needed for custom ::before bullet positioning */
+  padding-left: 1.2em; /* Space for the custom bullet */
+}
+
+.fieldItem::before {
+  content: "•"; /* Custom bullet point */
+  position: absolute;
+  left: 0; /* Position at the start of the padding-left */
+  color: #2563eb; /* Blue bullet color, matching summary */
+  font-weight: bold;
+  font-size: 1.1em; /* Slightly larger bullet */
+  line-height: inherit; /* Inherit line-height for vertical alignment */
 }
 
 
-/* Optional: dark mode */
+/* --- Dark Mode (retained and adjusted for new classes) --- */
 @media (prefers-color-scheme: dark) {
   .card {
     background-color: #1e293b;
@@ -58,40 +139,29 @@ border: 1px solid #e5e7eb;
     color: #f8fafc;
   }
 
-  .desc,
-  .list,
-  .details {
+  .desc {
     color: #cbd5e1;
   }
-}
 
-.summary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #2563eb; /* Business blue */
-  background-color: transparent;
-  padding: 0.5rem 0.75rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  user-select: none;
-  outline: none;
-}
+  /* Dark mode for the new classes */
+  .fieldSubheader {
+    color: #f8fafc; /* Lighter color in dark mode */
+    border-left-color: #a78bfa; /* Lighter accent color (e.g., violet-400) */
+  }
 
-.summary:hover {
-  background-color: #eff6ff; /* Light blue on hover */
-  color: #1e40af;
-}
+  .itemList {
+    /* No specific changes needed here unless default browser list styles in dark mode are an issue */
+  }
 
-.details[open] .summary {
-  color: #1e40af;
-  font-weight: 600;
-}
+  .fieldItem {
+    color: #cbd5e1; /* Lighter color for list items in dark mode */
+  }
 
-@media (prefers-color-scheme: dark) {
+  .fieldItem::before {
+    color: #93c5fd; /* Lighter bullet color (e.g., blue-300) */
+  }
+
+  /* Summary dark mode (retained) */
   .summary {
     color: #93c5fd;
   }
@@ -106,57 +176,7 @@ border: 1px solid #e5e7eb;
   }
 }
 
-.details {
-  margin-top: 1rem;
-  border-top: 1px solid #e5e7eb; /* light gray border */
-  padding-top: 1rem;
+/* --- Media Queries (adjust as needed for responsiveness) --- */
+@media (min-width: 768px) {
+  /* You might want to adjust font sizes or spacing for larger screens */
 }
-
-.summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: 600;
-  font-size: 0.95rem;
-  cursor: pointer;
-  color: #2563eb; /* blue-600 */
-  transition: color 0.2s ease;
-}
-
-.summary:hover {
-  color: #1e40af; /* blue-800 */
-}
-
-.icon {
-  margin-left: 0.5rem;
-  width: 1rem;
-  height: 1rem;
-  transition: transform 0.2s ease;
-}
-
-.detailContent {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: #374151; /* gray-700 */
-}
-
-.categoryBlock {
-  font-weight: 600;
-  color: #111827; /* gray-900 */
-  background-color: #f9fafb;
-  padding: 0.5rem 0.75rem;
-  border-left: 4px solid #3b82f6; /* blue-500 */
-  border-radius: 0.375rem;
-}
-
-.normalItem {
-  padding-left: 0.5rem;
-  color: #374151;
-}
-
-
-

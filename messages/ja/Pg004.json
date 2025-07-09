@@ -6,47 +6,47 @@
       "title": "IT事業",
       "desc": "金融・保険・公共・社会基盤を中心とした幅広い分野に対応し、業務アプリケーションから基盤構築、クラウド、ネットワーク運用まで総合的に提供いたします。",
       "fields": [
-        "【業界】",
-        "  金融：銀行、信託銀行、証券、クレジットカード",
-        "  保険：生命保険、損害保険、共済系",
-        "  公共：総合行政業務、福祉、標準化対応、次期DX",
-        "  基盤：クラウド（AWS・Azure）、サーバ構築、ネットワーク",
-        "  その他：通信、組込（車載系・IOT）、SAP、Salesforce",
-        
-        "【システム形態】",
-        "  オープン系、メインフレーム、Android、iOS",
-        "【開発技術】",
-        "  Java、C#、.NET、Typescript、Python、Cobol、C/C++",
-        "  Intra-mart、RPA、アビニシオ",
-        "  AWS/Azure、Unix/Linux、Windows、汎用機環境構築、ネットワーク構築"
+        { "type": "subheader", "text": "【業界】" },
+        { "type": "item", "text": "金融：銀行、信託銀行、証券、クレジットカード" },
+        { "type": "item", "text": "保険：生命保険、損害保険、共済系" },
+        { "type": "item", "text": "公共：総合行政業務、福祉、標準化対応、次期DX" },
+        { "type": "item", "text": "基盤：クラウド（AWS・Azure）、サーバ構築、ネットワーク" },
+        { "type": "item", "text": "その他：通信、組込（車載系・IOT）、SAP、Salesforce" },
+        { "type": "subheader", "text": "【システム形態】" },
+        { "type": "item", "text": "オープン系、メインフレーム、Android、iOS" },
+        { "type": "subheader", "text": "【開発技術】" },
+        { "type": "item", "text": "Java、C#、.NET、Typescript、Python、Cobol、C/C++" },
+        { "type": "item", "text": "Intra-mart、RPA、アビニシオ" },
+        { "type": "item", "text": "AWS/Azure、Unix/Linux、Windows、汎用機環境構築、ネットワーク構築" }
       ]
     },
     {
       "title": "不動産事業",
       "desc": "IT事業を主力としながらも、不動産分野の成長も視野に入れ、売買・建築・賃貸など幅広く展開しています。",
       "fields": [
-        "土地／マンション売買",
-        "建築／分譲",
-        "店舗等投資物件賃貸"
+        { "type": "item", "text": "土地／マンション売買" },
+        { "type": "item", "text": "建築／分譲" },
+        { "type": "item", "text": "店舗等投資物件賃貸" }
       ]
     },
     {
       "title": "主要開発実績",
       "desc": "以下は当社が過去に取り組んできた主要な分野です。",
       "fields": [
-        "業務アプリケーション開発：金融（銀行・クレジットカード・証券）、保険、生保損保基幹システム開発",
-        "公共DX：自治体向け公共システム・生成AI活用の自治体DX支援",
-        "組込系：車載Audio、自動運転制御・検証",
-        "通信：通信機器関連開発・検証",
-        "クラウド環境を利用したインフラ構築・開発（AWS / Azure）",
-        "オンプレミス型基盤構築・運用保守",
-        "SmartCity関連",
-        "交通、食品安全、教育Cloudサービス",
-        "電子マネー・モバイル決済・インターネット決済",
-        "日経企業中国現地ビジネスのサポート"
+        { "type": "item", "text": "業務アプリケーション開発：金融（銀行・クレジットカード・証券）、保険、生保損保基幹システム開発" },
+        { "type": "item", "text": "公共DX：自治体向け公共システム・生成AI活用の自治体DX支援" },
+        { "type": "item", "text": "組込系：車載Audio、自動運転制御・検証" },
+        { "type": "item", "text": "通信：通信機器関連開発・検証" },
+        { "type": "item", "text": "クラウド環境を利用したインフラ構築・開発（AWS / Azure）" },
+        { "type": "item", "text": "オンプレミス型基盤構築・運用保守" },
+        { "type": "item", "text": "SmartCity関連" },
+        { "type": "item", "text": "交通、食品安全、教育Cloudサービス" },
+        { "type": "item", "text": "電子マネー・モバイル決済・インターネット決済" },
+        { "type": "item", "text": "日経企業中国現地ビジネスのサポート" }
       ]
     }
   ],
+
   "pg004_fields_labels": {
     "project_name": "案件名",
     "role": "担当",
