@@ -27,7 +27,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   useEffect(() => {
     const handleMessageFromParent = (event: MessageEvent) => {
       // **重要：验证发送方来源**
-      const allowedParentOrigin = 'http://www.inexus.co.jp/'; // <--- 替换为实际父页面域名和协议
+      const allowedParentOrigin = 'http://www.inexus.co.jp'; // <--- 替换为实际父页面域名和协议
 
       if (event.origin !== allowedParentOrigin) {
         console.warn('收到来自未经授权父源的消息:', event.origin);
