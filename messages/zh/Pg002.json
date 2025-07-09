@@ -2,24 +2,30 @@
   "pg002_title": "＜擅长领域＞",
   "pg002_summary_items": [
     { "type": "title", "text": "金融领域" },
-    { "type": "item", "text": "账户系统的存款业务／汇兑业务／银行间中继业务等" },
-    { "type": "item", "text": "（主要为 NTT Data 地方银行共用系统、JASTEM、MEJAR 等）" },
-    { "type": "item", "text": "外围系统的共用银行批处理业务／交易记录业务／AWS基础架构构建与运维" },
+    { "type": "item", "text": "银行、证券、信用卡、政府系金融业务开发·维护保养" },
+    { "type": "item", "text": "=>账务系统的存款/汇兑/银行间/债权业务等" },
+    { "type": "item", "text": "=>信息系统/周边系统/数据收集分发/EUC业务等" },
 
     { "type": "title", "text": "保险领域" },
-    { "type": "item", "text": "人寿保险／财产保险的开发与维护、运营（NW）" },
-    { "type": "item", "text": "（主要客户包括东京海上、保德信人寿、住房金融机构、三菱UFJ银行、大和总研）" },
+    { "type": "item", "text": "寿险/财险/互助系统业务开发·维护保养" },
+    { "type": "item", "text": "=>保险业务/营业业务/产品开发业务等" },
 
-    { "type": "title", "text": "社会基础设施领域" },
-    { "type": "item", "text": "Web系统开发／信用卡系统／大规模Ethernet系统开发" },
-    { "type": "item", "text": "（主要客户包括理研维他命、iNet、NSS 等）" },
+    { "type": "title", "text": "公共领域" },
+    { "type": "item", "text": "面向地方政府的综合行政信息系统业务开发·维护保养" },
+    { "type": "item", "text": "=>面向地方政府的系统开发·提供/标准化对应/DX服务化等" },
 
-    { "type": "title", "text": "＜我们的优势＞" },
-    { "type": "item", "text": "拥有众多精通金融行业账户系统／外围系统／保险业务的系统工程师人才" },
-    { "type": "item", "text": "拥有众多熟悉社会基础设施（如 AWS 等）网络构建的系统工程师人才" },
+    { "type": "title", "text": "通信·嵌入式领域" },
+    { "type": "item", "text": "大规模以太网开发/车载系统开发等" },
+
+    { "type": "title", "text": "基础设施领域" },
+    { "type": "item", "text": "AWS·Azure基础架构构建/本地部署基础架构构建/网络构建/运维保养等" },
+
+    { "type": "title", "text": "＜公司优势＞" },
+    { "type": "item", "text": "拥有众多精通金融行业账务系统/周边系统/保险业务的SE人才" },
+    { "type": "item", "text": "拥有众多精通社会基础环境（如AWS）网络构建的SE人才" },
 
     { "type": "title", "text": "根据客户需求" },
-    { "type": "item", "text": "可与本公司子公司（日本籍SE团队）联动，提供人员提案" },
-    { "type": "item", "text": "可在首都圈、北海道（札幌）及名古屋以外地区提供开发与维护服务" }
+    { "type": "item", "text": "与我司子公司（日本人SE团队）协作的人员提案" },
+    { "type": "item", "text": "在首都圈、北海道（札幌）、名古屋以外地区的开发·维护" }
   ]
 }
