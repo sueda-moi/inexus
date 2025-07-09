@@ -33,16 +33,19 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
 
 
   useEffect(() => {
-    if (!isMobileIframe && isMenuOpen) { 
+    if (!isMobileIframe && isMenuOpen) {
       toggleMenu();
     }
   }, [isMobileIframe, isMenuOpen, toggleMenu]);
 
+  const [initialPathname, setInitialPathname] = useState(pathname); 
+
   useEffect(() => {
-    if (isMobileIframe && isMenuOpen) {
+    if (isMobileIframe && isMenuOpen && pathname !== initialPathname) {
       toggleMenu();
     }
-  }, [pathname, isMobileIframe, isMenuOpen, toggleMenu]); 
+    setInitialPathname(pathname);
+  }, [pathname, isMobileIframe, isMenuOpen, toggleMenu, initialPathname]);
 
 
   const navItems = [
