@@ -149,7 +149,6 @@ html.is-desktop-iframe .top-btn {
 
 /* === 新增：为 iframe 内部的手机模式添加样式 === */
 html.is-mobile-iframe .scroll-down-btn {
-  /* 举例：在手机模式下，可能需要缩小一些，或者调整位置 */
   bottom: 1.5rem; /* 离底部更近 */
   width: 2.5rem;
   height: 2.5rem;
