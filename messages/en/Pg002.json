@@ -3,16 +3,16 @@
   "pg002_summary_items": [
     { "type": "title", "text": "Finance Sector" },
     { "type": "item", "text": "Development and maintenance of banking, securities, credit card, and government-affiliated financial operations" },
-    { "type": "item", "text": "=>Deposit/exchange/interbank/debt operations for accounting systems, etc." },
-    { "type": "item", "text": "=>Information systems/peripheral systems/data collection and distribution/EUC operations, etc." },
+    { "type": "item", "text": "Deposit/exchange/interbank/debt operations for accounting systems, etc." },
+    { "type": "item", "text": "Information systems/peripheral systems/data collection and distribution/EUC operations, etc." },
 
     { "type": "title", "text": "Insurance Sector" },
     { "type": "item", "text": "Development and maintenance of life insurance/non-life insurance/mutual aid systems" },
-    { "type": "item", "text": "=>Insurance operations/sales operations/product development operations, etc." },
+    { "type": "item", "text": "Insurance operations/sales operations/product development operations, etc." },
 
     { "type": "title", "text": "Public Sector" },
     { "type": "item", "text": "Development and maintenance of integrated administrative information systems for local governments" },
-    { "type": "item", "text": "=>System development and provision for local governments/standardization support/DX service transformation, etc." },
+    { "type": "item", "text": "System development and provision for local governments/standardization support/DX service transformation, etc." },
 
     { "type": "title", "text": "Communications & Embedded Systems" },
     { "type": "item", "text": "Large-scale Ethernet development/in-vehicle system development, etc." },

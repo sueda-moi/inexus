@@ -4,119 +4,194 @@
   "pg004_services": [
     {
       "title": "IT业务",
-      "desc": "我们提供涵盖金融、保险、公共、社会基础等广泛领域，从业务应用到基础架构构建、云服务、网络运营的综合性IT服务。",
+      "desc": "我们为以金融、保险、公共事业和社会基础设施为中心的广泛领域提供服务，从业务应用程序到基础设施构建、云计算、网络运营，提供综合性解决方案。",
       "fields": [
-        "【行业】",
-        "金融：银行、信托银行、证券、信用卡",
-        "保险：寿险、财险、互助系",
-        "公共：综合行政业务、福利、标准化对应、下一代DX",
-        "基础：云（AWS·Azure）、服务器构建、网络",
-        "其他：通信、嵌入式（车载系统·IOT）、SAP、Salesforce",
-        "【系统形式】",
-        "开放系统、大型机、Android、iOS",
-        "【开发技术】",
-        "Java、C#、.NET、Typescript、Python、Cobol、C/C++",
-        "Intra-mart、RPA、Ab Initio",
-        "AWS/Azure、Unix/Linux、Windows、通用机环境构建、网络构建"
+        {
+          "type": "subheader",
+          "text": "【行业】"
+        },
+        {
+          "type": "item",
+          "text": "金融：银行、信托银行、证券、信用卡"
+        },
+        {
+          "type": "item",
+          "text": "保险：人寿保险、财产保险、互助保险"
+        },
+        {
+          "type": "item",
+          "text": "公共事业：综合行政业务、福利、标准化对应、下一代数字化转型（DX）"
+        },
+        {
+          "type": "item",
+          "text": "基础设施：云服务（AWS・Azure）、服务器构建、网络"
+        },
+        {
+          "type": "item",
+          "text": "其他：通信、嵌入式（车载系统・物联网）、SAP、Salesforce"
+        },
+        {
+          "type": "subheader",
+          "text": "【系统形态】"
+        },
+        {
+          "type": "item",
+          "text": "开放系统、大型机、Android、iOS"
+        },
+        {
+          "type": "subheader",
+          "text": "【开发技术】"
+        },
+        {
+          "type": "item",
+          "text": "Java、C#、.NET、Typescript、Python、Cobol、C/C++"
+        },
+        {
+          "type": "item",
+          "text": "Intra-mart、RPA、Ab Initio"
+        },
+        {
+          "type": "item",
+          "text": "AWS/Azure、Unix/Linux、Windows、大型机环境构建、网络构建"
+        }
       ]
     },
     {
       "title": "房地产业务",
-      "desc": "以IT业务为主力，同时着眼于房地产领域的成长，广泛开展买卖、建筑、租赁等业务。",
+      "desc": "我们在以IT业务为主力的同时，也着眼于房地产领域的成长，广泛开展买卖、建筑、租赁等业务。",
       "fields": [
-        "土地/公寓买卖",
-        "建筑/分销",
-        "店铺等投资物业租赁"
+        {
+          "type": "item",
+          "text": "土地/公寓买卖"
+        },
+        {
+          "type": "item",
+          "text": "建筑/分户出售"
+        },
+        {
+          "type": "item",
+          "text": "商铺等投资性物业租赁"
+        }
       ]
     },
     {
       "title": "主要开发业绩",
-      "desc": "以下是本公司过去所从事的主要领域。",
+      "desc": "以下是我公司过去从事的主要领域。",
       "fields": [
-        "业务应用开发：金融（银行·信用卡·证券）、保险、寿险财险核心系统开发",
-        "公共DX：面向地方政府的公共系统·利用生成式AI的地方政府DX支援",
-        "嵌入式：车载音频、自动驾驶控制·验证",
-        "通信：通信设备相关开发·验证",
-        "利用云环境的基础设施构建·开发（AWS / Azure）",
-        "本地部署型基础架构构建·运维保养",
-        "SmartCity相关",
-        "交通、食品安全、教育云服务",
-        "电子货币·移动支付·互联网支付",
-        "支持日资企业在中国当地的业务"
+        {
+          "type": "item",
+          "text": "业务应用开发：金融（银行、信用卡、证券）、保险、人寿及财产保险核心系统开发"
+        },
+        {
+          "type": "item",
+          "text": "公共事业DX：面向地方政府的公共系统、利用生成式AI支持地方政府的DX"
+        },
+        {
+          "type": "item",
+          "text": "嵌入式系统：车载音响、自动驾驶控制与验证"
+        },
+        {
+          "type": "item",
+          "text": "通信：通信设备相关开发与验证"
+        },
+        {
+          "type": "item",
+          "text": "利用云环境的基础设施构建与开发（AWS / Azure）"
+        },
+        {
+          "type": "item",
+          "text": "本地化（On-premise）基础设施构建、运营与维护"
+        },
+        {
+          "type": "item",
+          "text": "智慧城市相关"
+        },
+        {
+          "type": "item",
+          "text": "交通、食品安全、教育云服务"
+        },
+        {
+          "type": "item",
+          "text": "电子货币、移动支付、网上支付"
+        },
+        {
+          "type": "item",
+          "text": "支持日企在中国的本地业务"
+        }
       ]
     }
   ],
   "pg004_fields_labels": {
     "project_name": "项目名称",
-    "role": "负责",
-    "phase": "阶段",
-    "tech_stack": "开发技术·环境"
+    "role": "负责内容",
+    "phase": "负责阶段",
+    "tech_stack": "开发技术/环境"
   },
   "pg004_business_fields_title": "主要业务业绩",
   "pg004_business_fields": [
     {
-      "category": "金融系统",
+      "category": "金融类系统",
       "projects": [
         {
-          "title": "网上银行基础架构构建",
+          "title": "网上银行基础设施构建",
           "responsibility": "AWS环境构建（EC2, S3, EBS, VPC）",
-          "phase": "需求定义～发布·维护",
+          "phase": "需求定义～上线・维护",
           "technology": "AWS CLI、Shell、JP1"
         },
         {
-          "title": "地方银行共享中心：存款·汇兑·融资业务",
-          "responsibility": "详细设计～集成·综合测试、维护对应",
+          "title": "地方银行共同中心：存款、外汇、贷款业务",
+          "responsibility": "详细设计～集成・综合测试、维护对应",
           "phase": "开发～维护",
           "technology": "COBOL、JCL、TSO、DB2、CICS"
         },
         {
-          "title": "金融业务的账务/周边系统开发",
+          "title": "金融业务核心账务/外围系统开发",
           "responsibility": "需求分析、设计、开发、测试、导入",
-          "phase": "从上游到下游全程对应",
+          "phase": "上游～下游全流程对应",
           "technology": "Java、Spring、Oracle、Unix"
         }
       ]
     },
     {
-      "category": "保险系统",
+      "category": "保险类系统",
       "projects": [
         {
-          "title": "寿险：新合同系统刷新",
+          "title": "人寿保险：新合同系统更新",
           "responsibility": "设计、开发、测试、迁移支持",
           "phase": "基本设计～维护",
           "technology": "Java、Spring、MyBatis、PostgreSQL"
         },
         {
-          "title": "财险：合同管理·支持系统",
+          "title": "财产保险：合同管理与支持系统",
           "responsibility": "业务设计、系统维护",
           "phase": "设计～维护",
           "technology": "C#、.NET、Oracle"
         },
         {
-          "title": "保险合同管理及索赔处理",
+          "title": "保险合同管理及理赔处理",
           "responsibility": "开发、测试、运营支持",
-          "phase": "实施～发布",
+          "phase": "实现～上线",
           "technology": "VB.NET、SQL Server、Windows Server"
         }
       ]
     },
     {
-      "category": "社会基础系统",
+      "category": "社会基础设施类系统",
       "projects": [
         {
-          "title": "地方政府DX：智慧城市Web门户",
-          "responsibility": "前端/后端开发、AI聊天机器人联动",
+          "title": "地方政府DX：智慧城市门户网站",
+          "responsibility": "前端/后端开发、AI聊天机器人集成",
           "phase": "敏捷开发",
           "technology": "Vue.js、Node.js、Python、AWS"
         },
         {
           "title": "公共交通：票务平台",
-          "responsibility": "系统设计、支付网关联动",
+          "responsibility": "系统设计、支付网关集成",
           "phase": "需求定义～交付",
           "technology": "Java、Spring Boot、PostgreSQL、Docker"
         },
         {
-          "title": "医疗：云管理系统",
+          "title": "医疗：云端管理系统",
           "responsibility": "云基础设施构建、全栈实现",
           "phase": "设计～运营",
           "technology": "React、NestJS、GCP、Kubernetes"
@@ -124,38 +199,38 @@
       ]
     }
   ],
-  "pg004_clients_title": "主要客户列表",
-  "pg004_clients_alt": "主要合作企业列表图",
-  "geo-map-section": "全球视野",
-  "pg004_3year_plan_title": "近三年运营业绩",
+  "pg004_clients_title": "主要客户一览",
+  "pg004_clients_alt": "主要合作企业一览图",
+  "geo-map-section": "全球化视角",
+  "pg004_3year_plan_title": "近3年运营业绩",
   "pg004_3year_plan_details": [
     [
-      "IT业务：提供业务SE服务（金融、信贷等）",
-      "房地产业务：智慧城市相关、房地产建设、买卖、投资物业租赁"
+      "IT业务：提供业务系统工程师服务（金融、信用卡等）",
+      "房地产业务：智慧城市相关、房地产建设、买卖、投资性物业租赁"
     ],
     [
-      "IT业务：业务SE服务（金融、信贷、产业、AWS等）",
-      "房地产业务：智慧城市相关、房地产建设、买卖、投资物业租赁",
+      "IT业务：提供业务系统工程师服务（金融、信用卡、产业、AWS等）",
+      "房地产业务：智慧城市相关、房地产建设、买卖、投资性物业租赁",
       "其他：餐饮相关业务"
     ],
     [
-      "IT业务：业务SE服务（金融、信贷、产业、AWS等）",
-      "房地产业务：智慧城市相关、房地产建设、买卖、投资物业租赁",
+      "IT业务：提供业务系统工程师服务（金融、信用卡、产业、AWS等）",
+      "房地产业务：智慧城市相关、房地产建设、买卖、投资性物业租赁",
       "其他：餐饮相关业务"
     ]
   ],
   "pg004_view_details": "查看详情",
   "pg004_hide_details": "隐藏详情",
   "pg004_chart_tabs": {
-    "revenue": "营收趋势（三年）",
-    "workforce": "员工·承包商构成趋势"
+    "revenue": "销售额推移（3年）",
+    "workforce": "员工与外包人员构成推移"
   },
-  "pg004_chart_revenue_title": "营收趋势（三年）",
-  "pg004_chart_workforce_title": "员工·承包商构成趋势",
+  "pg004_chart_revenue_title": "销售额推移（3年）",
+  "pg004_chart_workforce_title": "员工与外包人员构成推移",
   "pg004_chart_axis_revenue_unit": "亿日元",
   "pg004_chart_axis_workforce_unit": "人",
-  "pg004_chart_legend_employees": "员工",
-  "pg004_chart_legend_contractors": "承包商",
+  "pg004_chart_legend_employees": "正式员工",
+  "pg004_chart_legend_contractors": "外包人员",
   "pg004_chart_section_title_suffix": "的业务内容",
   "pg004_chart_estimated_suffix": "（预计）"
 }
