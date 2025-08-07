@@ -39,3 +39,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# --- AWS Amplify Gen 2 ---
+# The amplify/ directory IS your backend source code and MUST be checked in.
+# However, ignore the hidden .amplify/ state/build directory inside it.
+amplify/.amplify/
+
+# Ignore generated client configuration files which contain secrets
+# and environment-specific resource IDs.
+amplifyconfiguration.json
+amplify_outputs.json
+
+# Ignore sandbox deployment outputs
+.amplify-outputs/
