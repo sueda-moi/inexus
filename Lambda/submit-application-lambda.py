@@ -3,15 +3,38 @@ import json
 import boto3
 import os
 
-SENDER_EMAIL = os.environ.get('SENDER_EMAIL') #  "no-reply@blueocean.co.jp"
-RECIPIENT_EMAIL = os.environ.get('RECIPIENT_EMAIL') #  "hr@blueocean.co.jp"
+# --- New Configuration for Dynamic CORS ---
+ALLOWED_ORIGINS_STR = os.environ.get('ALLOWED_ORIGINS', '')
+ALLOWED_ORIGINS = [origin.strip() for origin in ALLOWED_ORIGINS_STR.split(',')]
+
+SENDER_EMAIL = os.environ.get('SENDER_EMAIL')
+RECIPIENT_EMAIL = os.environ.get('RECIPIENT_EMAIL')
 S3_BUCKET_NAME = os.environ.get('S3_BUCKET_NAME')
 S3_REGION = os.environ.get('S3_REGION', 'ap-northeast-1')
 
 ses_client = boto3.client('ses', region_name=S3_REGION)
-s3_client = boto3.client('s3', region_name=S3_REGION) # S3クライアント
+s3_client = boto3.client('s3', region_name=S3_REGION)
 
 def lambda_handler(event, context):
+    
+    # --- Dynamic CORS Header Logic ---
+    origin = event.get('headers', {}).get('origin')
+    
+    if origin in ALLOWED_ORIGINS:
+        access_control_allow_origin = origin
+    else:
+        access_control_allow_origin = ALLOWED_ORIGINS[0] if ALLOWED_ORIGINS else None
+
+    headers = {
+        "Access-Control-Allow-Origin": access_control_allow_origin,
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Methods": "OPTIONS,POST",
+        "Access-Control-Allow-Credentials": "true"
+    }
+    
+    # Handle preflight OPTIONS request
+    if event.get('httpMethod') == 'OPTIONS':
+        return {'statusCode': 204, 'headers': headers, 'body': ''}
     try:
         body = json.loads(event.get('body', '{}'))
         
@@ -22,14 +45,14 @@ def lambda_handler(event, context):
         cover_letter = body.get('coverLetter', 'N/A')
         resume_key = body.get('resumeFileKey', '') 
 
-        # --- 新增逻辑：生成简历的预签名下载URL ---
+        # 生成简历的预签名下载URL ---
         presigned_download_url = ""
         download_link_text = "" # ダウンロードリンクの表示テキスト
         
         if resume_key: 
             try:
-                # URLの有効期限を1時間 (3600秒) に設定
-                expires_in_minutes = 60 
+                # URLの有効期限を72時間 に設定
+                expires_in_minutes = 4320
                 presigned_download_url = s3_client.generate_presigned_url(
                     'get_object',
                     Params={
@@ -53,7 +76,7 @@ def lambda_handler(event, context):
             download_link_text = "<p>履歴書・職務経歴書は提供されていません。</p>"
         # ----------------------------------------------
 
-        # 构造邮件内容
+        # 邮件内容
         email_subject = f"【新規応募】{job_title} - {name}様"
         email_body_html = f"""
             <html>
@@ -75,7 +98,7 @@ def lambda_handler(event, context):
             </html>
         """
 
-        # 发送邮件
+        # Send the email
         ses_client.send_email(
             Source=SENDER_EMAIL,
             Destination={'ToAddresses': [RECIPIENT_EMAIL]},
@@ -87,6 +110,7 @@ def lambda_handler(event, context):
         
         return {
             'statusCode': 200,
+            'headers': headers, # Add dynamic headers to success response
             'body': json.dumps({'message': 'Application processed successfully'})
         }
 
@@ -94,5 +118,6 @@ def lambda_handler(event, context):
         print(e)
         return {
             'statusCode': 500,
+            'headers': headers, # Add dynamic headers to error response
             'body': json.dumps({'error': 'Failed to process application'})
         }

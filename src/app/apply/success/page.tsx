@@ -18,7 +18,7 @@ export default function ApplySuccessPage() {
         <p className={styles.message}>
           {getMessage("Pg900", "success_page_message")}
         </p>
-        <Link href="/Pg100" className={styles.homeButton}>
+        <Link href="/Pg001" className={styles.homeButton}>
           {getMessage("Pg900", "success_page_button")}
         </Link>
       </div>
