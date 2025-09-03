@@ -1,11 +1,22 @@
 {
-    "nav_home": "ホーム",
+  "nav_home": "ホーム",
   "nav_about": "概要",
   "nav_services": "事業内容",
   "nav_contact": "お問い合わせ",
   "language_toggle": "言語切替",
   "pg001_title": "私たちはＩＴを通してお客様のビジネスに最大限に貢献します。",
-  "pg001_subtitle": "「人」を大事にし、社員が幸せを感じる会社を目指します。" ,
+  "pg001_subtitle": "「人」を大事にし、社員が幸せを感じる会社を目指します。",
   "pg001_button_learn_more": "詳しく見る",
-  "footer_copyright": "ALL RIGHTS RESERVED ©Nexus Technology Co., Ltd."
+  "footer_copyright": "ALL RIGHTS RESERVED ©Nexus Technology Co., Ltd.",
+  "header_category": "採用情報",
+  "header_title": "採用情報",
+  "header_subtitle": "私たちと共に、未来を「想像」し、新しい価値を「創造」しませんか。あなたの挑戦をお待ちしています。",
+  "JobDetailLayout-companyName": "Nexus株式会社",
+  "JobDetailLayout-jobDescription-title": "仕事内容詳細",
+  "JobDetailLayout-responsibilities-title": "主な職務内容",
+  "JobDetailLayout-qualifications-must-title": "応募資格【必須】",
+  "JobDetailLayout-qualifications-want-title": "応募資格【歓迎】",
+  "JobDetailLayout-qualifications-other-title": "求める人物像",
+  "JobDetailLayout-benefits-title": "労働条件・福利厚生",
+  "JobDetailLayout-applyButton": "このポジションに応募する"
 }

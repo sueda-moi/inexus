@@ -1,0 +1,144 @@
+/*
+ * ===================================================================
+ * Styles for the ApplicationForm Component
+ * ===================================================================
+ * A clean, professional, and user-friendly form layout.
+ * ===================================================================
+ */
+
+.formContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--white-color);
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  padding: 3rem;
+  border-top: 5px solid var(--primary-red);
+}
+
+/* === Header === */
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.applyingFor {
+  color: var(--secondary-text-color);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.jobTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin: 0;
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--primary-red);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+/* === Form Elements === */
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--primary-red);
+  box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.15);
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Custom File Input */
+.fileInput {
+  display: block;
+  width: 100%;
+  font-size: 0.9rem;
+  color: var(--secondary-text-color);
+}
+.fileInput::file-selector-button {
+  margin-right: 1rem;
+  background-color: var(--light-background);
+  color: var(--dark-color);
+  border: 1px solid var(--border-color);
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.fileInput::file-selector-button:hover {
+  background-color: #e0e0e0;
+}
+
+
+/* === Submit Button === */
+.submitButton {
+  display: block;
+  width: 100%;
+  margin-top: 1.5rem;
+  background-color: var(--primary-red);
+  color: var(--white-color);
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #B71C1C;
+}
+
+.submitButton:disabled {
+  background-color: var(--secondary-text-color);
+  cursor: not-allowed;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 2rem 1.5rem;
+  }
+  .jobTitle {
+    font-size: 1.8rem;
+  }
+}

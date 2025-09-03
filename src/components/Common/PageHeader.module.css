@@ -1,0 +1,75 @@
+.pageHeader {
+  background-color: #f9fafb;
+  /* Light gray background */
+  padding: 4rem 2rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.textWrapper {
+  flex: 1;
+}
+
+.category {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1d4ed8;
+  /* Brand Blue */
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.8;
+}
+
+.imageWrapper {
+  flex: 1;
+  max-width: 50%;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .imageWrapper {
+    /* --- Key fix: Reset the flex properties for this element --- */
+    /* This forces the element to respect its explicit width and height instead of growing or shrinking. */
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+    height: 300px;
+  }
+
+  .title {
+    font-size: 2.25rem;
+  }
+}

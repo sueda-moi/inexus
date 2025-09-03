@@ -1,0 +1,49 @@
+/*
+ * ===================================================================
+ * Styles for the Reusable Section Component
+ * ===================================================================
+ * Provides consistent styling for titled content blocks (paragraphs or lists).
+ * ===================================================================
+ */
+
+.section {
+  /* Spacing is handled by the parent container where this component is used */
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--primary-red);
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--secondary-text-color);
+  margin: 0;
+}
+
+.list {
+  list-style-position: outside;
+  padding-left: 1.5rem; /* Space for bullets */
+  margin: 0;
+  display: grid;
+  gap: 0.75rem; /* Consistent space between list items */
+}
+
+.list li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--secondary-text-color);
+}
+
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+}

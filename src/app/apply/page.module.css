@@ -1,0 +1,44 @@
+/*
+ * ===================================================================
+ * Styles for the Main Job Application Page Wrapper
+ * ===================================================================
+ * This file styles the container that holds the application form.
+ * The form itself should be styled in its own component's CSS file.
+ * ===================================================================
+ */
+
+.pageContainer {
+  background-color: var(--light-background);
+  padding: 4rem 2rem;
+  min-height: calc(100vh - 80px); /* Fill the screen below the header */
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  font-size: 1.2rem;
+  color: var(--secondary-text-color);
+  font-weight: 500;
+}
+
+/* Note: The <ApplicationForm /> component should contain its own styling.
+  Typically, it would be a centered card with a max-width, like this:
+
+  .applicationFormWrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--white-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  }
+*/
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 3rem 1.5rem;
+  }
+}
